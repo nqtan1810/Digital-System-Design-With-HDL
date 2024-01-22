@@ -1,0 +1,30 @@
+module traffic_light (north_south,
+							 east_west,
+							 rstn,
+							 clk
+							 );
+	
+	parameter S0 = 0;
+	parameter S1 = 1;
+	parameter S2 = 2;
+	parameter S3 = 3;
+	parameter S4 = 4;
+	parameter S5 = 5;
+	
+	output [2:0] north_south;
+	output [2:0] east_west;
+	
+	input rstn;
+	input clk;
+	
+	reg [2:0] present_state;
+	reg [2:0] next_state;
+	
+	always @(*) begin
+	
+	
+	
+	end
+	
+							 
+endmodule 

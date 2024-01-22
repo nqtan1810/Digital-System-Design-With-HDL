@@ -1,0 +1,32 @@
+module Mux_5to1_1_bit ( m,
+								s2,
+								s1,
+								s0,
+								u,
+								v,
+								w,
+								x,
+								y
+								);
+		
+	output m;
+	
+	input s2;
+	input s1;
+	input s0;
+	input u;
+	input v;
+	input w;
+	input x;
+	input y;
+	
+	wire uv;
+	wire wx;
+	wire uvwx;
+	
+	Mux_2to1_bit m1(.m(uv), .s(s0), .x(u), .y(v));
+	Mux_2to1_bit m2(.m(wx), .s(s0), .x(w), .y(x));
+	Mux_2to1_bit m3(.m(uvwx), .s(s1), .x(uv), .y(wx));
+	Mux_2to1_bit m1(.m(m), .s(s2), .x(uvwx), .y(y));
+								
+endmodule 

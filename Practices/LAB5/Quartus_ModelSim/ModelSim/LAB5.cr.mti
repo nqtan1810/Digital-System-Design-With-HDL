@@ -1,0 +1,50 @@
+D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/TH/LAB5/ALU_32bits.v {1 {vlog -work work -vopt -stats=none D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/TH/LAB5/ALU_32bits.v
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module ALU_32bits
+
+Top level modules:
+	ALU_32bits
+
+} {} {}} D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/TH/LAB5/signExtend.v {1 {vlog -work work -vopt -stats=none D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/TH/LAB5/signExtend.v
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module signExtend
+
+Top level modules:
+	signExtend
+
+} {} {}} D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/TH/LAB5/RegisterFile.v {1 {vlog -work work -vopt -stats=none D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/TH/LAB5/RegisterFile.v
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module RegisterFile
+
+Top level modules:
+	RegisterFile
+
+} {} {}} D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/TH/LAB5/mux.v {1 {vlog -work work -vopt -stats=none D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/TH/LAB5/mux.v
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module mux
+
+Top level modules:
+	mux
+
+} {} {}} D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/TH/LAB5/datapath.v {1 {vlog -work work -vopt -stats=none D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/TH/LAB5/datapath.v
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module datapath
+
+Top level modules:
+	datapath
+
+} {} {}} D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/TH/LAB5/DataMemory.v {1 {vlog -work work -vopt -stats=none D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/TH/LAB5/DataMemory.v
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module DataMemory
+
+Top level modules:
+	DataMemory
+
+} {} {}} D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/TH/LAB5/tb1.v {1 {vlog -work work -vopt -stats=none D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/TH/LAB5/tb1.v
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module tb1
+
+Top level modules:
+	tb1
+
+} {} {}}

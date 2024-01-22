@@ -1,0 +1,120 @@
+module seven_segment ( Y,
+							  C
+							  );
+							  
+	output [6:0] Y;
+	
+	input [2:0] C;
+	
+	assign Y[0] = C[2] | (~C[1] & C[0]);
+	assign Y[1] = ~(C[1] | C[0]);
+	assign Y[2] = ~(C[1] | C[0]);
+	assign Y[3] = C[2] | C[1] | C[0];
+	assign Y[4] = 1'b1;
+	assign Y[5] = 1'b1;
+	assign Y[6] = ~(C[2] | C[1]);
+							  
+endmodule 
+
+
+===================================================
+
+
+// module so sanh so nhap vao voi 9
+module Comparator (z,
+						 v
+						 );
+						 
+	output z;
+	
+	input [3:0] v;
+	
+	assign z = v <= 4'b1001 ? 1'b0 : 1'b1;
+
+endmodule 
+
+
+// module xu ly 3 bit LSB cua so nhap vao
+module Circuit_A (m,
+						v
+						);
+						
+	output [2:0] m;
+	
+	input [2:0] v;
+	
+	assign m[0] = v[0];
+	assign m[1] = ~v[1];
+	assign m[2] = v[2] & v[1];
+
+
+endmodule 
+
+
+
+// module xu ly 1 bit MSB cua so nhap vao
+module Circuit_B (hex,
+						z
+						);
+						
+	output [6:0] hex;
+	
+	input z;
+	
+	assign hex = z == 1'b1 ? 7'b0000110 : 7'b0111111;
+
+endmodule 
+
+
+
+// module hien thi so Decimal tu 4bits Binary
+module Seven_Segment_Decoder (hex,
+										bin
+										);
+										
+	output [6:0] hex;
+	
+	input [3:0] bin;
+	
+	assign hex[0] = bin[3] | bin[1] | (bin[2] ~^ bin[0]);
+	assign hex[1] = (~bin[2]) | (bin[1] ~^ bin[0]);
+	assign hex[2] = bin[2] | (~bin[1]) | bin[0];
+	assign hex[3] = bin[3] | (~(bin[2] | bin[0])) | ((~bin[2]) & bin[1]) | ((~bin[0]) & bin[1]) | (bin[2] & (~bin[1]) & bin[0]);
+	assign hex[4] = (~(bin[2] | bin[0])) | ((~bin[0]) & bin[1]);
+	assign hex[5] = bin[3] | (~(bin[1] | bin[0])) | ((~bin[1]) & bin[2]) | ((~bin[0]) & bin[2]);
+	assign hex[6] = bin[3] | (bin[2] ^ bin[1]) | ((~bin[0]) & bin[1]); 
+
+endmodule 
+
+
+
+// module top cua toan he thong chuyen doi Binary sang Decimal
+module Decimal_Display (d0,
+								d1,
+								v
+								);
+								
+	output [6:0] d0;
+	output [6:0] d1;
+	
+	input [3:0] v;
+	
+	wire z;
+	wire [2:0] out_A;
+	wire [3:0] m;
+	
+	
+	Comparator C(.v(v), .z(z));
+	
+	Circuit_A C_A(.v(v[2:0]), .m(out_A));
+	
+	Mux_2to1_bit Mux0(.m(m[0]), .s(z), .x(v[0]), .y(out_A[0]));
+	Mux_2to1_bit Mux1(.m(m[1]), .s(z), .x(v[1]), .y(out_A[1]));
+	Mux_2to1_bit Mux2(.m(m[2]), .s(z), .x(v[2]), .y(out_A[2]));
+	Mux_2to1_bit Mux3(.m(m[3]), .s(z), .x(v[3]), .y(1'b0));
+	
+	Circuit_B C_B(.hex(d1), .z(z));
+	
+	Seven_Segment_Decoder Seven_Segment(.hex(d0), .bin(m));
+	
+endmodule 

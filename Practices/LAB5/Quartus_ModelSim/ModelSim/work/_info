@@ -1,0 +1,171 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/University/Thiet_Ke_He_Thong_So_Voi_HDL/Final_Project/Risc_V_ModelSim
+T_opt
+!s110 1701739408
+VZP2TH_^O:c=I7ID<AkMc?3
+04 3 4 work tb1 fast 0
+=1-346f249b9557-656e7b90-e0-4960
+o-quiet -auto_acc_if_foreign -work work +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;10.5;63
+R0
+vALU_32bits
+Z2 !s110 1701847836
+!i10b 1
+!s100 3ZP`>UQ65Q<k;8fHX>Wm51
+IGgOXH6>zHD7n7>DdlOJ<@2
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+Z4 dD:/University/Thiet_Ke_He_Thong_So_Voi_HDL/TH/LAB5/ModelSim
+w1701690743
+8D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/TH/LAB5/ALU_32bits.v
+FD:/University/Thiet_Ke_He_Thong_So_Voi_HDL/TH/LAB5/ALU_32bits.v
+L0 1
+Z5 OL;L;10.5;63
+r1
+!s85 0
+31
+Z6 !s108 1701847836.000000
+!s107 D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/TH/LAB5/ALU_32bits.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/TH/LAB5/ALU_32bits.v|
+!i113 0
+Z7 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+n@a@l@u_32bits
+vDataMemory
+R2
+!i10b 1
+!s100 m7z;C5CnaQOeE@]HeE6HW2
+ISZ;ZEJmC;@4:N7haJ>1Pb0
+R3
+R4
+w1701737965
+8D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/TH/LAB5/DataMemory.v
+FD:/University/Thiet_Ke_He_Thong_So_Voi_HDL/TH/LAB5/DataMemory.v
+L0 1
+R5
+r1
+!s85 0
+31
+R6
+!s107 D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/TH/LAB5/DataMemory.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/TH/LAB5/DataMemory.v|
+!i113 0
+R7
+R1
+n@data@memory
+vdatapath
+Z8 !s110 1701847837
+!i10b 1
+!s100 Z>SR?C:C==FHokPcRRL:S1
+IQnL95Co7X[_4f9]C@@gd00
+R3
+R4
+w1701690869
+8D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/TH/LAB5/datapath.v
+FD:/University/Thiet_Ke_He_Thong_So_Voi_HDL/TH/LAB5/datapath.v
+L0 1
+R5
+r1
+!s85 0
+31
+Z9 !s108 1701847837.000000
+!s107 D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/TH/LAB5/datapath.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/TH/LAB5/datapath.v|
+!i113 0
+R7
+R1
+vmux
+R8
+!i10b 1
+!s100 9^U]2W4a>XXg@0`Uho@EE3
+IVP^mlmH8TO<aPzk^G?O`H1
+R3
+R4
+w1701690885
+8D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/TH/LAB5/mux.v
+FD:/University/Thiet_Ke_He_Thong_So_Voi_HDL/TH/LAB5/mux.v
+L0 1
+R5
+r1
+!s85 0
+31
+R9
+!s107 D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/TH/LAB5/mux.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/TH/LAB5/mux.v|
+!i113 0
+R7
+R1
+vRegisterFile
+R8
+!i10b 1
+!s100 b1PGG;MkRbJVC42?_`2LB1
+IUTOn]`51UlFHRR>PJZd5U2
+R3
+R4
+w1701737957
+8D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/TH/LAB5/RegisterFile.v
+FD:/University/Thiet_Ke_He_Thong_So_Voi_HDL/TH/LAB5/RegisterFile.v
+L0 1
+R5
+r1
+!s85 0
+31
+R9
+!s107 D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/TH/LAB5/RegisterFile.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/TH/LAB5/RegisterFile.v|
+!i113 0
+R7
+R1
+n@register@file
+vsignExtend
+R8
+!i10b 1
+!s100 NaLUaFK3_;n1=mWW>F?nD3
+Ik2RXmJ_[7JJGdVOJmcG1<3
+R3
+R4
+w1701691685
+8D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/TH/LAB5/signExtend.v
+FD:/University/Thiet_Ke_He_Thong_So_Voi_HDL/TH/LAB5/signExtend.v
+L0 1
+R5
+r1
+!s85 0
+31
+R9
+!s107 D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/TH/LAB5/signExtend.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/TH/LAB5/signExtend.v|
+!i113 0
+R7
+R1
+nsign@extend
+vtb1
+R2
+!i10b 1
+!s100 K14g2n<oLW7Y41km_2@WU3
+ILk]Bn6=OG=<^^b^8:e?Dl3
+R3
+R4
+w1701739381
+8D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/TH/LAB5/tb1.v
+FD:/University/Thiet_Ke_He_Thong_So_Voi_HDL/TH/LAB5/tb1.v
+L0 1
+R5
+r1
+!s85 0
+31
+R6
+!s107 D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/TH/LAB5/tb1.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/TH/LAB5/tb1.v|
+!i113 0
+R7
+R1

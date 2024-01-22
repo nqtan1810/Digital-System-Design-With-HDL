@@ -1,0 +1,70 @@
+|D_latch_D_Flipflop
+Qa <= D_latch:Da.Qa
+Qan <= D_latch:Da.Qb
+Qb <= D_Flipflop:Db.Q
+Qbn <= D_Flipflop:Db.Qn
+Qc <= D_Flipflop:Dc.Q
+Qcn <= D_Flipflop:Dc.Qn
+D => D~0.IN3
+Clk => Clk~0.IN2
+
+
+|D_latch_D_Flipflop|D_latch:Da
+Qa <= Qa~1.DB_MAX_OUTPUT_PORT_TYPE
+Qb <= Qb~0.DB_MAX_OUTPUT_PORT_TYPE
+D => S_g~0.IN0
+D => R_g~0.IN0
+Clk => S_g~0.IN1
+Clk => R_g~0.IN1
+
+
+|D_latch_D_Flipflop|D_Flipflop:Db
+Q <= D_latch:Slave.Qa
+Qn <= D_latch:Slave.Qb
+D => D~0.IN1
+Clk => Clk~0.IN1
+
+
+|D_latch_D_Flipflop|D_Flipflop:Db|D_latch:Master
+Qa <= Qa~1.DB_MAX_OUTPUT_PORT_TYPE
+Qb <= Qb~0.DB_MAX_OUTPUT_PORT_TYPE
+D => S_g~0.IN0
+D => R_g~0.IN0
+Clk => S_g~0.IN1
+Clk => R_g~0.IN1
+
+
+|D_latch_D_Flipflop|D_Flipflop:Db|D_latch:Slave
+Qa <= Qa~1.DB_MAX_OUTPUT_PORT_TYPE
+Qb <= Qb~0.DB_MAX_OUTPUT_PORT_TYPE
+D => S_g~0.IN0
+D => R_g~0.IN0
+Clk => S_g~0.IN1
+Clk => R_g~0.IN1
+
+
+|D_latch_D_Flipflop|D_Flipflop:Dc
+Q <= D_latch:Slave.Qa
+Qn <= D_latch:Slave.Qb
+D => D~0.IN1
+Clk => Clk~0.IN1
+
+
+|D_latch_D_Flipflop|D_Flipflop:Dc|D_latch:Master
+Qa <= Qa~1.DB_MAX_OUTPUT_PORT_TYPE
+Qb <= Qb~0.DB_MAX_OUTPUT_PORT_TYPE
+D => S_g~0.IN0
+D => R_g~0.IN0
+Clk => S_g~0.IN1
+Clk => R_g~0.IN1
+
+
+|D_latch_D_Flipflop|D_Flipflop:Dc|D_latch:Slave
+Qa <= Qa~1.DB_MAX_OUTPUT_PORT_TYPE
+Qb <= Qb~0.DB_MAX_OUTPUT_PORT_TYPE
+D => S_g~0.IN0
+D => R_g~0.IN0
+Clk => S_g~0.IN1
+Clk => R_g~0.IN1
+
+

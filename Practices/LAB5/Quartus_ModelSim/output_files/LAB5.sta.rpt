@@ -1,0 +1,1509 @@
+TimeQuest Timing Analyzer report for LAB5
+Mon Dec 04 22:41:44 2023
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'clock'
+ 12. Slow Model Hold: 'clock'
+ 13. Slow Model Minimum Pulse Width: 'clock'
+ 14. Setup Times
+ 15. Hold Times
+ 16. Clock to Output Times
+ 17. Minimum Clock to Output Times
+ 18. Propagation Delay
+ 19. Minimum Propagation Delay
+ 20. Fast Model Setup Summary
+ 21. Fast Model Hold Summary
+ 22. Fast Model Recovery Summary
+ 23. Fast Model Removal Summary
+ 24. Fast Model Minimum Pulse Width Summary
+ 25. Fast Model Setup: 'clock'
+ 26. Fast Model Hold: 'clock'
+ 27. Fast Model Minimum Pulse Width: 'clock'
+ 28. Setup Times
+ 29. Hold Times
+ 30. Clock to Output Times
+ 31. Minimum Clock to Output Times
+ 32. Propagation Delay
+ 33. Minimum Propagation Delay
+ 34. Multicorner Timing Analysis Summary
+ 35. Setup Times
+ 36. Hold Times
+ 37. Clock to Output Times
+ 38. Minimum Clock to Output Times
+ 39. Progagation Delay
+ 40. Minimum Progagation Delay
+ 41. Setup Transfers
+ 42. Hold Transfers
+ 43. Report TCCS
+ 44. Report RSKM
+ 45. Unconstrained Paths
+ 46. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; LAB5                                                              ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C35F672C6                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 12     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                            ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets   ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; clock      ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clock } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+
+
++-------------------------------------------------+
+; Slow Model Fmax Summary                         ;
++-----------+-----------------+------------+------+
+; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
++-----------+-----------------+------------+------+
+; 71.27 MHz ; 71.27 MHz       ; clock      ;      ;
++-----------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++---------------------------------+
+; Slow Model Setup Summary        ;
++-------+---------+---------------+
+; Clock ; Slack   ; End Point TNS ;
++-------+---------+---------------+
+; clock ; -13.031 ; -22993.315    ;
++-------+---------+---------------+
+
+
++-------------------------------+
+; Slow Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clock ; 1.679 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clock ; -1.380 ; -2049.380             ;
++-------+--------+-----------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clock'                                                                                                                               ;
++---------+------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack   ; From Node                          ; To Node                            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++---------+------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
+; -13.031 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~279 ; clock        ; clock       ; 1.000        ; -0.049     ; 14.018     ;
+; -12.987 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~308 ; clock        ; clock       ; 1.000        ; -0.033     ; 13.990     ;
+; -12.986 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~276 ; clock        ; clock       ; 1.000        ; -0.033     ; 13.989     ;
+; -12.968 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~855 ; clock        ; clock       ; 1.000        ; -0.044     ; 13.960     ;
+; -12.966 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~599 ; clock        ; clock       ; 1.000        ; -0.044     ; 13.958     ;
+; -12.874 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~863 ; clock        ; clock       ; 1.000        ; -0.023     ; 13.887     ;
+; -12.874 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~703 ; clock        ; clock       ; 1.000        ; -0.031     ; 13.879     ;
+; -12.873 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~607 ; clock        ; clock       ; 1.000        ; -0.023     ; 13.886     ;
+; -12.858 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~151 ; clock        ; clock       ; 1.000        ; -0.009     ; 13.885     ;
+; -12.858 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~183 ; clock        ; clock       ; 1.000        ; -0.009     ; 13.885     ;
+; -12.819 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~727 ; clock        ; clock       ; 1.000        ; -0.045     ; 13.810     ;
+; -12.817 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~983 ; clock        ; clock       ; 1.000        ; -0.050     ; 13.803     ;
+; -12.817 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~479 ; clock        ; clock       ; 1.000        ; -0.006     ; 13.847     ;
+; -12.788 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~723 ; clock        ; clock       ; 1.000        ; -0.012     ; 13.812     ;
+; -12.783 ; RegisterFile:regFile|registers~834 ; RegisterFile:regFile|registers~279 ; clock        ; clock       ; 1.000        ; -0.013     ; 13.806     ;
+; -12.782 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~664 ; clock        ; clock       ; 1.000        ; -0.016     ; 13.802     ;
+; -12.768 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~31  ; clock        ; clock       ; 1.000        ; -0.006     ; 13.798     ;
+; -12.767 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~660 ; clock        ; clock       ; 1.000        ; -0.016     ; 13.787     ;
+; -12.756 ; RegisterFile:regFile|registers~705 ; RegisterFile:regFile|registers~279 ; clock        ; clock       ; 1.000        ; -0.023     ; 13.769     ;
+; -12.754 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~627 ; clock        ; clock       ; 1.000        ; -0.008     ; 13.782     ;
+; -12.754 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~883 ; clock        ; clock       ; 1.000        ; -0.008     ; 13.782     ;
+; -12.749 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~575 ; clock        ; clock       ; 1.000        ; -0.031     ; 13.754     ;
+; -12.738 ; RegisterFile:regFile|registers~672 ; RegisterFile:regFile|registers~279 ; clock        ; clock       ; 1.000        ; -0.011     ; 13.763     ;
+; -12.735 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~87  ; clock        ; clock       ; 1.000        ; -0.017     ; 13.754     ;
+; -12.730 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~23  ; clock        ; clock       ; 1.000        ; -0.017     ; 13.749     ;
+; -12.720 ; RegisterFile:regFile|registers~834 ; RegisterFile:regFile|registers~855 ; clock        ; clock       ; 1.000        ; -0.008     ; 13.748     ;
+; -12.718 ; RegisterFile:regFile|registers~834 ; RegisterFile:regFile|registers~599 ; clock        ; clock       ; 1.000        ; -0.008     ; 13.746     ;
+; -12.712 ; RegisterFile:regFile|registers~705 ; RegisterFile:regFile|registers~308 ; clock        ; clock       ; 1.000        ; -0.007     ; 13.741     ;
+; -12.711 ; RegisterFile:regFile|registers~161 ; RegisterFile:regFile|registers~279 ; clock        ; clock       ; 1.000        ; -0.048     ; 13.699     ;
+; -12.711 ; RegisterFile:regFile|registers~705 ; RegisterFile:regFile|registers~276 ; clock        ; clock       ; 1.000        ; -0.007     ; 13.740     ;
+; -12.704 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~869 ; clock        ; clock       ; 1.000        ; -0.040     ; 13.700     ;
+; -12.703 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~581 ; clock        ; clock       ; 1.000        ; -0.044     ; 13.695     ;
+; -12.702 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~613 ; clock        ; clock       ; 1.000        ; -0.040     ; 13.698     ;
+; -12.697 ; RegisterFile:regFile|registers~770 ; RegisterFile:regFile|registers~279 ; clock        ; clock       ; 1.000        ; -0.016     ; 13.717     ;
+; -12.694 ; RegisterFile:regFile|registers~672 ; RegisterFile:regFile|registers~308 ; clock        ; clock       ; 1.000        ; 0.005      ; 13.735     ;
+; -12.693 ; RegisterFile:regFile|registers~672 ; RegisterFile:regFile|registers~276 ; clock        ; clock       ; 1.000        ; 0.005      ; 13.734     ;
+; -12.693 ; RegisterFile:regFile|registers~705 ; RegisterFile:regFile|registers~855 ; clock        ; clock       ; 1.000        ; -0.018     ; 13.711     ;
+; -12.691 ; RegisterFile:regFile|registers~705 ; RegisterFile:regFile|registers~599 ; clock        ; clock       ; 1.000        ; -0.018     ; 13.709     ;
+; -12.690 ; RegisterFile:regFile|registers~768 ; RegisterFile:regFile|registers~279 ; clock        ; clock       ; 1.000        ; -0.016     ; 13.710     ;
+; -12.689 ; RegisterFile:regFile|registers~192 ; RegisterFile:regFile|registers~279 ; clock        ; clock       ; 1.000        ; -0.024     ; 13.701     ;
+; -12.688 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~997 ; clock        ; clock       ; 1.000        ; -0.007     ; 13.717     ;
+; -12.688 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~991 ; clock        ; clock       ; 1.000        ; -0.018     ; 13.706     ;
+; -12.676 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~52  ; clock        ; clock       ; 1.000        ; -0.021     ; 13.691     ;
+; -12.676 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~663 ; clock        ; clock       ; 1.000        ; -0.016     ; 13.696     ;
+; -12.675 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~841 ; clock        ; clock       ; 1.000        ; -0.012     ; 13.699     ;
+; -12.675 ; RegisterFile:regFile|registers~672 ; RegisterFile:regFile|registers~855 ; clock        ; clock       ; 1.000        ; -0.006     ; 13.705     ;
+; -12.674 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~585 ; clock        ; clock       ; 1.000        ; -0.012     ; 13.698     ;
+; -12.674 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~535 ; clock        ; clock       ; 1.000        ; -0.016     ; 13.694     ;
+; -12.673 ; RegisterFile:regFile|registers~672 ; RegisterFile:regFile|registers~599 ; clock        ; clock       ; 1.000        ; -0.006     ; 13.703     ;
+; -12.671 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~375 ; clock        ; clock       ; 1.000        ; -0.035     ; 13.672     ;
+; -12.671 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~311 ; clock        ; clock       ; 1.000        ; -0.035     ; 13.672     ;
+; -12.667 ; RegisterFile:regFile|registers~161 ; RegisterFile:regFile|registers~308 ; clock        ; clock       ; 1.000        ; -0.032     ; 13.671     ;
+; -12.666 ; RegisterFile:regFile|registers~161 ; RegisterFile:regFile|registers~276 ; clock        ; clock       ; 1.000        ; -0.032     ; 13.670     ;
+; -12.661 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~741 ; clock        ; clock       ; 1.000        ; -0.036     ; 13.661     ;
+; -12.657 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~837 ; clock        ; clock       ; 1.000        ; -0.033     ; 13.660     ;
+; -12.651 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~485 ; clock        ; clock       ; 1.000        ; -0.028     ; 13.659     ;
+; -12.648 ; RegisterFile:regFile|registers~161 ; RegisterFile:regFile|registers~855 ; clock        ; clock       ; 1.000        ; -0.043     ; 13.641     ;
+; -12.647 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~453 ; clock        ; clock       ; 1.000        ; -0.028     ; 13.655     ;
+; -12.647 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~180 ; clock        ; clock       ; 1.000        ; -0.009     ; 13.674     ;
+; -12.646 ; RegisterFile:regFile|registers~161 ; RegisterFile:regFile|registers~599 ; clock        ; clock       ; 1.000        ; -0.043     ; 13.639     ;
+; -12.646 ; RegisterFile:regFile|registers~768 ; RegisterFile:regFile|registers~308 ; clock        ; clock       ; 1.000        ; 0.000      ; 13.682     ;
+; -12.645 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~948 ; clock        ; clock       ; 1.000        ; -0.045     ; 13.636     ;
+; -12.645 ; RegisterFile:regFile|registers~192 ; RegisterFile:regFile|registers~308 ; clock        ; clock       ; 1.000        ; -0.008     ; 13.673     ;
+; -12.645 ; RegisterFile:regFile|registers~768 ; RegisterFile:regFile|registers~276 ; clock        ; clock       ; 1.000        ; 0.000      ; 13.681     ;
+; -12.644 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~820 ; clock        ; clock       ; 1.000        ; -0.045     ; 13.635     ;
+; -12.644 ; RegisterFile:regFile|registers~192 ; RegisterFile:regFile|registers~276 ; clock        ; clock       ; 1.000        ; -0.008     ; 13.672     ;
+; -12.642 ; RegisterFile:regFile|registers~34  ; RegisterFile:regFile|registers~279 ; clock        ; clock       ; 1.000        ; -0.025     ; 13.653     ;
+; -12.641 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~37  ; clock        ; clock       ; 1.000        ; -0.022     ; 13.655     ;
+; -12.641 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~503 ; clock        ; clock       ; 1.000        ; -0.031     ; 13.646     ;
+; -12.640 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~286 ; clock        ; clock       ; 1.000        ; -0.012     ; 13.664     ;
+; -12.639 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~906 ; clock        ; clock       ; 1.000        ; -0.039     ; 13.636     ;
+; -12.637 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~101 ; clock        ; clock       ; 1.000        ; -0.022     ; 13.651     ;
+; -12.637 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~471 ; clock        ; clock       ; 1.000        ; -0.031     ; 13.642     ;
+; -12.637 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~318 ; clock        ; clock       ; 1.000        ; -0.012     ; 13.661     ;
+; -12.634 ; RegisterFile:regFile|registers~770 ; RegisterFile:regFile|registers~855 ; clock        ; clock       ; 1.000        ; -0.011     ; 13.659     ;
+; -12.632 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~339 ; clock        ; clock       ; 1.000        ; -0.017     ; 13.651     ;
+; -12.632 ; RegisterFile:regFile|registers~770 ; RegisterFile:regFile|registers~599 ; clock        ; clock       ; 1.000        ; -0.011     ; 13.657     ;
+; -12.631 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~371 ; clock        ; clock       ; 1.000        ; -0.017     ; 13.650     ;
+; -12.629 ; RegisterFile:regFile|registers~67  ; RegisterFile:regFile|registers~279 ; clock        ; clock       ; 1.000        ; -0.026     ; 13.639     ;
+; -12.627 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~595 ; clock        ; clock       ; 1.000        ; -0.012     ; 13.651     ;
+; -12.627 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~851 ; clock        ; clock       ; 1.000        ; -0.012     ; 13.651     ;
+; -12.627 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~439 ; clock        ; clock       ; 1.000        ; -0.031     ; 13.632     ;
+; -12.627 ; RegisterFile:regFile|registers~768 ; RegisterFile:regFile|registers~855 ; clock        ; clock       ; 1.000        ; -0.011     ; 13.652     ;
+; -12.626 ; RegisterFile:regFile|registers~192 ; RegisterFile:regFile|registers~855 ; clock        ; clock       ; 1.000        ; -0.019     ; 13.643     ;
+; -12.625 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~407 ; clock        ; clock       ; 1.000        ; -0.031     ; 13.630     ;
+; -12.625 ; RegisterFile:regFile|registers~768 ; RegisterFile:regFile|registers~599 ; clock        ; clock       ; 1.000        ; -0.011     ; 13.650     ;
+; -12.624 ; RegisterFile:regFile|registers~192 ; RegisterFile:regFile|registers~599 ; clock        ; clock       ; 1.000        ; -0.019     ; 13.641     ;
+; -12.621 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~647 ; clock        ; clock       ; 1.000        ; -0.022     ; 13.635     ;
+; -12.619 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~903 ; clock        ; clock       ; 1.000        ; -0.022     ; 13.633     ;
+; -12.617 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~517 ; clock        ; clock       ; 1.000        ; -0.002     ; 13.651     ;
+; -12.615 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~265 ; clock        ; clock       ; 1.000        ; -0.012     ; 13.639     ;
+; -12.614 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~297 ; clock        ; clock       ; 1.000        ; -0.012     ; 13.638     ;
+; -12.612 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~645 ; clock        ; clock       ; 1.000        ; -0.002     ; 13.646     ;
+; -12.610 ; RegisterFile:regFile|registers~834 ; RegisterFile:regFile|registers~151 ; clock        ; clock       ; 1.000        ; 0.027      ; 13.673     ;
+; -12.610 ; RegisterFile:regFile|registers~834 ; RegisterFile:regFile|registers~183 ; clock        ; clock       ; 1.000        ; 0.027      ; 13.673     ;
+; -12.607 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~919 ; clock        ; clock       ; 1.000        ; -0.004     ; 13.639     ;
+; -12.606 ; RegisterFile:regFile|registers~713 ; RegisterFile:regFile|registers~664 ; clock        ; clock       ; 1.000        ; -0.004     ; 13.638     ;
+; -12.605 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~330 ; clock        ; clock       ; 1.000        ; -0.037     ; 13.604     ;
+; -12.603 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~791 ; clock        ; clock       ; 1.000        ; -0.004     ; 13.635     ;
+; -12.600 ; RegisterFile:regFile|registers~65  ; RegisterFile:regFile|registers~279 ; clock        ; clock       ; 1.000        ; -0.026     ; 13.610     ;
++---------+------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'clock'                                                                                                                                ;
++-------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                           ; To Node                             ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+; 1.679 ; DataMemory:dmem|dmem~757            ; RegisterFile:regFile|registers~725  ; clock        ; clock       ; 0.000        ; 0.014      ; 1.959      ;
+; 1.853 ; RegisterFile:regFile|registers~730  ; DataMemory:dmem|dmem~922            ; clock        ; clock       ; 0.000        ; 0.027      ; 2.146      ;
+; 2.025 ; DataMemory:dmem|dmem~886            ; RegisterFile:regFile|registers~726  ; clock        ; clock       ; 0.000        ; 0.000      ; 2.291      ;
+; 2.115 ; DataMemory:dmem|dmem~1008           ; RegisterFile:regFile|registers~720  ; clock        ; clock       ; 0.000        ; 0.000      ; 2.381      ;
+; 2.204 ; DataMemory:dmem|dmem~326            ; RegisterFile:regFile|registers~710  ; clock        ; clock       ; 0.000        ; 0.011      ; 2.481      ;
+; 2.213 ; DataMemory:dmem|dmem~757            ; RegisterFile:regFile|registers~981  ; clock        ; clock       ; 0.000        ; 0.014      ; 2.493      ;
+; 2.225 ; RegisterFile:regFile|registers~941  ; DataMemory:dmem|dmem~781            ; clock        ; clock       ; 0.000        ; 0.000      ; 2.491      ;
+; 2.225 ; RegisterFile:regFile|registers~941  ; DataMemory:dmem|dmem~909            ; clock        ; clock       ; 0.000        ; 0.000      ; 2.491      ;
+; 2.239 ; DataMemory:dmem|dmem~436            ; RegisterFile:regFile|registers~724  ; clock        ; clock       ; 0.000        ; 0.014      ; 2.519      ;
+; 2.268 ; DataMemory:dmem|dmem~870            ; RegisterFile:regFile|registers~710  ; clock        ; clock       ; 0.000        ; 0.003      ; 2.537      ;
+; 2.271 ; DataMemory:dmem|dmem~1013           ; RegisterFile:regFile|registers~725  ; clock        ; clock       ; 0.000        ; 0.014      ; 2.551      ;
+; 2.348 ; DataMemory:dmem|dmem~892            ; RegisterFile:regFile|registers~508  ; clock        ; clock       ; 0.000        ; 0.003      ; 2.617      ;
+; 2.372 ; DataMemory:dmem|dmem~917            ; RegisterFile:regFile|registers~725  ; clock        ; clock       ; 0.000        ; 0.020      ; 2.658      ;
+; 2.398 ; DataMemory:dmem|dmem~1010           ; RegisterFile:regFile|registers~722  ; clock        ; clock       ; 0.000        ; 0.000      ; 2.664      ;
+; 2.400 ; DataMemory:dmem|dmem~230            ; RegisterFile:regFile|registers~710  ; clock        ; clock       ; 0.000        ; -0.007     ; 2.659      ;
+; 2.403 ; DataMemory:dmem|dmem~926            ; RegisterFile:regFile|registers~510  ; clock        ; clock       ; 0.000        ; -0.007     ; 2.662      ;
+; 2.411 ; DataMemory:dmem|dmem~934            ; RegisterFile:regFile|registers~710  ; clock        ; clock       ; 0.000        ; 0.000      ; 2.677      ;
+; 2.437 ; DataMemory:dmem|dmem~422            ; RegisterFile:regFile|registers~710  ; clock        ; clock       ; 0.000        ; -0.009     ; 2.694      ;
+; 2.454 ; DataMemory:dmem|dmem~981            ; RegisterFile:regFile|registers~725  ; clock        ; clock       ; 0.000        ; 0.038      ; 2.758      ;
+; 2.481 ; DataMemory:dmem|dmem~446            ; RegisterFile:regFile|registers~510  ; clock        ; clock       ; 0.000        ; -0.009     ; 2.738      ;
+; 2.492 ; DataMemory:dmem|dmem~970            ; RegisterFile:regFile|registers~714  ; clock        ; clock       ; 0.000        ; 0.022      ; 2.780      ;
+; 2.502 ; DataMemory:dmem|dmem~927            ; RegisterFile:regFile|registers~511  ; clock        ; clock       ; 0.000        ; -0.003     ; 2.765      ;
+; 2.511 ; DataMemory:dmem|dmem~732            ; RegisterFile:regFile|registers~508  ; clock        ; clock       ; 0.000        ; 0.035      ; 2.812      ;
+; 2.522 ; DataMemory:dmem|dmem~693            ; RegisterFile:regFile|registers~725  ; clock        ; clock       ; 0.000        ; 0.057      ; 2.845      ;
+; 2.548 ; RegisterFile:regFile|registers~249  ; DataMemory:dmem|dmem~505            ; clock        ; clock       ; 0.000        ; -0.006     ; 2.808      ;
+; 2.550 ; DataMemory:dmem|dmem~322            ; RegisterFile:regFile|registers~706  ; clock        ; clock       ; 0.000        ; 0.018      ; 2.834      ;
+; 2.573 ; DataMemory:dmem|dmem~866            ; RegisterFile:regFile|registers~706  ; clock        ; clock       ; 0.000        ; 0.010      ; 2.849      ;
+; 2.574 ; RegisterFile:regFile|registers~761  ; DataMemory:dmem|dmem~505            ; clock        ; clock       ; 0.000        ; 0.000      ; 2.840      ;
+; 2.576 ; DataMemory:dmem|dmem~902            ; RegisterFile:regFile|registers~710  ; clock        ; clock       ; 0.000        ; 0.000      ; 2.842      ;
+; 2.580 ; RegisterFile:regFile|registers~372  ; DataMemory:dmem|dmem~500            ; clock        ; clock       ; 0.000        ; -0.013     ; 2.833      ;
+; 2.581 ; DataMemory:dmem|dmem~461            ; RegisterFile:regFile|registers~685  ; clock        ; clock       ; 0.000        ; 0.007      ; 2.854      ;
+; 2.590 ; DataMemory:dmem|dmem~802            ; RegisterFile:regFile|registers~706  ; clock        ; clock       ; 0.000        ; 0.012      ; 2.868      ;
+; 2.593 ; DataMemory:dmem|dmem~959            ; RegisterFile:regFile|registers~511  ; clock        ; clock       ; 0.000        ; 0.010      ; 2.869      ;
+; 2.622 ; RegisterFile:regFile|registers~884  ; DataMemory:dmem|dmem~500            ; clock        ; clock       ; 0.000        ; -0.009     ; 2.879      ;
+; 2.626 ; DataMemory:dmem|dmem~855            ; RegisterFile:regFile|registers~695  ; clock        ; clock       ; 0.000        ; 0.014      ; 2.906      ;
+; 2.639 ; RegisterFile:regFile|registers~941  ; DataMemory:dmem|dmem~493            ; clock        ; clock       ; 0.000        ; -0.011     ; 2.894      ;
+; 2.647 ; RegisterFile:regFile|registers~1018 ; DataMemory:dmem|dmem~922            ; clock        ; clock       ; 0.000        ; 0.028      ; 2.941      ;
+; 2.647 ; DataMemory:dmem|dmem~845            ; RegisterFile:regFile|registers~685  ; clock        ; clock       ; 0.000        ; 0.000      ; 2.913      ;
+; 2.659 ; DataMemory:dmem|dmem~614            ; RegisterFile:regFile|registers~710  ; clock        ; clock       ; 0.000        ; 0.003      ; 2.928      ;
+; 2.685 ; DataMemory:dmem|dmem~650            ; RegisterFile:regFile|registers~714  ; clock        ; clock       ; 0.000        ; 0.004      ; 2.955      ;
+; 2.688 ; RegisterFile:regFile|registers~697  ; DataMemory:dmem|dmem~505            ; clock        ; clock       ; 0.000        ; 0.001      ; 2.955      ;
+; 2.701 ; DataMemory:dmem|dmem~924            ; RegisterFile:regFile|registers~508  ; clock        ; clock       ; 0.000        ; 0.000      ; 2.967      ;
+; 2.701 ; DataMemory:dmem|dmem~1015           ; RegisterFile:regFile|registers~695  ; clock        ; clock       ; 0.000        ; 0.020      ; 2.987      ;
+; 2.708 ; RegisterFile:regFile|registers~1017 ; DataMemory:dmem|dmem~505            ; clock        ; clock       ; 0.000        ; 0.000      ; 2.974      ;
+; 2.709 ; DataMemory:dmem|dmem~348            ; RegisterFile:regFile|registers~508  ; clock        ; clock       ; 0.000        ; -0.002     ; 2.973      ;
+; 2.710 ; DataMemory:dmem|dmem~324            ; RegisterFile:regFile|registers~804  ; clock        ; clock       ; 0.000        ; -0.027     ; 2.949      ;
+; 2.711 ; DataMemory:dmem|dmem~1008           ; RegisterFile:regFile|registers~112  ; clock        ; clock       ; 0.000        ; -0.002     ; 2.975      ;
+; 2.711 ; DataMemory:dmem|dmem~1008           ; RegisterFile:regFile|registers~80   ; clock        ; clock       ; 0.000        ; -0.002     ; 2.975      ;
+; 2.712 ; DataMemory:dmem|dmem~324            ; RegisterFile:regFile|registers~932  ; clock        ; clock       ; 0.000        ; -0.027     ; 2.951      ;
+; 2.712 ; DataMemory:dmem|dmem~118            ; RegisterFile:regFile|registers~726  ; clock        ; clock       ; 0.000        ; 0.034      ; 3.012      ;
+; 2.721 ; RegisterFile:regFile|registers~704  ; DataMemory:dmem|dmem~480            ; clock        ; clock       ; 0.000        ; 0.026      ; 3.013      ;
+; 2.721 ; DataMemory:dmem|dmem~469            ; RegisterFile:regFile|registers~725  ; clock        ; clock       ; 0.000        ; 0.040      ; 3.027      ;
+; 2.732 ; DataMemory:dmem|dmem~473            ; RegisterFile:regFile|registers~505  ; clock        ; clock       ; 0.000        ; 0.007      ; 3.005      ;
+; 2.732 ; DataMemory:dmem|dmem~898            ; RegisterFile:regFile|registers~706  ; clock        ; clock       ; 0.000        ; 0.004      ; 3.002      ;
+; 2.737 ; RegisterFile:regFile|registers~446  ; DataMemory:dmem|dmem~510            ; clock        ; clock       ; 0.000        ; -0.001     ; 3.002      ;
+; 2.739 ; DataMemory:dmem|dmem~899            ; RegisterFile:regFile|registers~675  ; clock        ; clock       ; 0.000        ; 0.002      ; 3.007      ;
+; 2.741 ; DataMemory:dmem|dmem~636            ; RegisterFile:regFile|registers~508  ; clock        ; clock       ; 0.000        ; 0.003      ; 3.010      ;
+; 2.743 ; DataMemory:dmem|dmem~984            ; RegisterFile:regFile|registers~632  ; clock        ; clock       ; 0.000        ; 0.016      ; 3.025      ;
+; 2.743 ; DataMemory:dmem|dmem~451            ; RegisterFile:regFile|registers~675  ; clock        ; clock       ; 0.000        ; -0.008     ; 3.001      ;
+; 2.744 ; DataMemory:dmem|dmem~706            ; RegisterFile:regFile|registers~706  ; clock        ; clock       ; 0.000        ; 0.039      ; 3.049      ;
+; 2.747 ; DataMemory:dmem|dmem~859            ; RegisterFile:regFile|registers~507  ; clock        ; clock       ; 0.000        ; 0.000      ; 3.013      ;
+; 2.747 ; DataMemory:dmem|dmem~710            ; RegisterFile:regFile|registers~710  ; clock        ; clock       ; 0.000        ; -0.022     ; 2.991      ;
+; 2.758 ; DataMemory:dmem|dmem~888            ; RegisterFile:regFile|registers~632  ; clock        ; clock       ; 0.000        ; 0.016      ; 3.040      ;
+; 2.762 ; RegisterFile:regFile|registers~837  ; DataMemory:dmem|dmem~485            ; clock        ; clock       ; 0.000        ; 0.004      ; 3.032      ;
+; 2.777 ; RegisterFile:regFile|registers~986  ; DataMemory:dmem|dmem~922            ; clock        ; clock       ; 0.000        ; 0.028      ; 3.071      ;
+; 2.796 ; DataMemory:dmem|dmem~223            ; RegisterFile:regFile|registers~511  ; clock        ; clock       ; 0.000        ; -0.015     ; 3.047      ;
+; 2.797 ; DataMemory:dmem|dmem~542            ; RegisterFile:regFile|registers~510  ; clock        ; clock       ; 0.000        ; -0.007     ; 3.056      ;
+; 2.799 ; DataMemory:dmem|dmem~928            ; RegisterFile:regFile|registers~832  ; clock        ; clock       ; 0.000        ; 0.000      ; 3.065      ;
+; 2.805 ; DataMemory:dmem|dmem~1013           ; RegisterFile:regFile|registers~981  ; clock        ; clock       ; 0.000        ; 0.014      ; 3.085      ;
+; 2.805 ; DataMemory:dmem|dmem~789            ; RegisterFile:regFile|registers~725  ; clock        ; clock       ; 0.000        ; 0.020      ; 3.091      ;
+; 2.808 ; DataMemory:dmem|dmem~459            ; RegisterFile:regFile|registers~683  ; clock        ; clock       ; 0.000        ; 0.006      ; 3.080      ;
+; 2.808 ; DataMemory:dmem|dmem~459            ; RegisterFile:regFile|registers~395  ; clock        ; clock       ; 0.000        ; 0.006      ; 3.080      ;
+; 2.810 ; RegisterFile:regFile|registers~996  ; DataMemory:dmem|dmem~484            ; clock        ; clock       ; 0.000        ; 0.007      ; 3.083      ;
+; 2.812 ; DataMemory:dmem|dmem~708            ; RegisterFile:regFile|registers~804  ; clock        ; clock       ; 0.000        ; -0.015     ; 3.063      ;
+; 2.814 ; RegisterFile:regFile|registers~251  ; DataMemory:dmem|dmem~251            ; clock        ; clock       ; 0.000        ; -0.007     ; 3.073      ;
+; 2.814 ; DataMemory:dmem|dmem~708            ; RegisterFile:regFile|registers~932  ; clock        ; clock       ; 0.000        ; -0.015     ; 3.065      ;
+; 2.821 ; DataMemory:dmem|dmem~739            ; RegisterFile:regFile|registers~675  ; clock        ; clock       ; 0.000        ; 0.012      ; 3.099      ;
+; 2.824 ; DataMemory:dmem|dmem~390            ; RegisterFile:regFile|registers~710  ; clock        ; clock       ; 0.000        ; -0.009     ; 3.081      ;
+; 2.825 ; DataMemory:dmem|dmem~951            ; RegisterFile:regFile|registers~695  ; clock        ; clock       ; 0.000        ; 0.041      ; 3.132      ;
+; 2.829 ; RegisterFile:regFile|registers~372  ; DataMemory:dmem|dmem~1012           ; clock        ; clock       ; 0.000        ; -0.013     ; 3.082      ;
+; 2.830 ; DataMemory:dmem|dmem~857            ; RegisterFile:regFile|registers~505  ; clock        ; clock       ; 0.000        ; 0.000      ; 3.096      ;
+; 2.831 ; DataMemory:dmem|dmem~1008           ; RegisterFile:regFile|registers~752  ; clock        ; clock       ; 0.000        ; -0.007     ; 3.090      ;
+; 2.831 ; DataMemory:dmem|dmem~1008           ; RegisterFile:regFile|registers~1008 ; clock        ; clock       ; 0.000        ; -0.007     ; 3.090      ;
+; 2.832 ; RegisterFile:regFile|registers~475  ; DataMemory:dmem|dmem~251            ; clock        ; clock       ; 0.000        ; -0.002     ; 3.096      ;
+; 2.833 ; RegisterFile:regFile|registers~864  ; DataMemory:dmem|dmem~480            ; clock        ; clock       ; 0.000        ; 0.007      ; 3.106      ;
+; 2.834 ; RegisterFile:regFile|registers~992  ; DataMemory:dmem|dmem~480            ; clock        ; clock       ; 0.000        ; 0.007      ; 3.107      ;
+; 2.835 ; DataMemory:dmem|dmem~1008           ; RegisterFile:regFile|registers~432  ; clock        ; clock       ; 0.000        ; -0.005     ; 3.096      ;
+; 2.835 ; RegisterFile:regFile|registers~933  ; DataMemory:dmem|dmem~485            ; clock        ; clock       ; 0.000        ; 0.021      ; 3.122      ;
+; 2.836 ; DataMemory:dmem|dmem~980            ; RegisterFile:regFile|registers~724  ; clock        ; clock       ; 0.000        ; 0.028      ; 3.130      ;
+; 2.841 ; DataMemory:dmem|dmem~763            ; RegisterFile:regFile|registers~507  ; clock        ; clock       ; 0.000        ; 0.018      ; 3.125      ;
+; 2.850 ; DataMemory:dmem|dmem~918            ; RegisterFile:regFile|registers~726  ; clock        ; clock       ; 0.000        ; 0.033      ; 3.149      ;
+; 2.850 ; DataMemory:dmem|dmem~884            ; RegisterFile:regFile|registers~724  ; clock        ; clock       ; 0.000        ; 0.043      ; 3.159      ;
+; 2.852 ; RegisterFile:regFile|registers~1001 ; DataMemory:dmem|dmem~489            ; clock        ; clock       ; 0.000        ; -0.022     ; 3.096      ;
+; 2.854 ; RegisterFile:regFile|registers~1001 ; DataMemory:dmem|dmem~457            ; clock        ; clock       ; 0.000        ; -0.022     ; 3.098      ;
+; 2.854 ; DataMemory:dmem|dmem~418            ; RegisterFile:regFile|registers~706  ; clock        ; clock       ; 0.000        ; -0.002     ; 3.118      ;
+; 2.869 ; DataMemory:dmem|dmem~749            ; RegisterFile:regFile|registers~685  ; clock        ; clock       ; 0.000        ; 0.018      ; 3.153      ;
+; 2.870 ; DataMemory:dmem|dmem~1009           ; RegisterFile:regFile|registers~945  ; clock        ; clock       ; 0.000        ; -0.013     ; 3.123      ;
+; 2.870 ; DataMemory:dmem|dmem~1009           ; RegisterFile:regFile|registers~689  ; clock        ; clock       ; 0.000        ; -0.013     ; 3.123      ;
+; 2.871 ; RegisterFile:regFile|registers~884  ; DataMemory:dmem|dmem~1012           ; clock        ; clock       ; 0.000        ; -0.009     ; 3.128      ;
+; 2.872 ; DataMemory:dmem|dmem~414            ; RegisterFile:regFile|registers~510  ; clock        ; clock       ; 0.000        ; -0.009     ; 3.129      ;
++-------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clock'                                                                    ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                    ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clock ; Rise       ; clock                     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~0    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~0    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~1    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~1    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~10   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~10   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~100  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~100  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~1000 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~1000 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~1001 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~1001 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~1002 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~1002 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~1003 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~1003 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~1004 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~1004 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~1005 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~1005 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~1006 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~1006 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~1007 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~1007 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~1008 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~1008 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~1009 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~1009 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~101  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~101  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~1010 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~1010 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~1011 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~1011 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~1012 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~1012 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~1013 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~1013 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~1014 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~1014 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~1015 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~1015 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~1016 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~1016 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~1017 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~1017 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~1018 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~1018 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~1019 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~1019 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~102  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~102  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~1020 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~1020 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~1021 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~1021 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~1022 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~1022 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~1023 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~1023 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~103  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~103  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~104  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~104  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~105  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~105  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~106  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~106  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~107  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~107  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~108  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~108  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~109  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~109  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~11   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~11   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~110  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~110  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~111  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~111  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~112  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~112  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~113  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~113  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~114  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~114  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~115  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~115  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~116  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~116  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~117  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~117  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~118  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~118  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~119  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~119  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~12   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~12   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~120  ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------+
+
+
++--------------------------------------------------------------------------------+
+; Setup Times                                                                    ;
++------------------+------------+--------+--------+------------+-----------------+
+; Data Port        ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++------------------+------------+--------+--------+------------+-----------------+
+; aluControl[*]    ; clock      ; 15.490 ; 15.490 ; Rise       ; clock           ;
+;  aluControl[0]   ; clock      ; 15.490 ; 15.490 ; Rise       ; clock           ;
+;  aluControl[1]   ; clock      ; 14.760 ; 14.760 ; Rise       ; clock           ;
+;  aluControl[2]   ; clock      ; 13.055 ; 13.055 ; Rise       ; clock           ;
+; aluSrc           ; clock      ; 16.478 ; 16.478 ; Rise       ; clock           ;
+; instruction[*]   ; clock      ; 19.038 ; 19.038 ; Rise       ; clock           ;
+;  instruction[0]  ; clock      ; 14.156 ; 14.156 ; Rise       ; clock           ;
+;  instruction[1]  ; clock      ; 14.472 ; 14.472 ; Rise       ; clock           ;
+;  instruction[2]  ; clock      ; 14.438 ; 14.438 ; Rise       ; clock           ;
+;  instruction[3]  ; clock      ; 14.040 ; 14.040 ; Rise       ; clock           ;
+;  instruction[4]  ; clock      ; 12.491 ; 12.491 ; Rise       ; clock           ;
+;  instruction[5]  ; clock      ; 11.411 ; 11.411 ; Rise       ; clock           ;
+;  instruction[6]  ; clock      ; 12.549 ; 12.549 ; Rise       ; clock           ;
+;  instruction[7]  ; clock      ; 12.124 ; 12.124 ; Rise       ; clock           ;
+;  instruction[8]  ; clock      ; 11.584 ; 11.584 ; Rise       ; clock           ;
+;  instruction[9]  ; clock      ; 11.857 ; 11.857 ; Rise       ; clock           ;
+;  instruction[10] ; clock      ; 11.944 ; 11.944 ; Rise       ; clock           ;
+;  instruction[11] ; clock      ; 12.579 ; 12.579 ; Rise       ; clock           ;
+;  instruction[12] ; clock      ; 12.401 ; 12.401 ; Rise       ; clock           ;
+;  instruction[13] ; clock      ; 13.915 ; 13.915 ; Rise       ; clock           ;
+;  instruction[14] ; clock      ; 14.143 ; 14.143 ; Rise       ; clock           ;
+;  instruction[15] ; clock      ; 12.393 ; 12.393 ; Rise       ; clock           ;
+;  instruction[16] ; clock      ; 17.916 ; 17.916 ; Rise       ; clock           ;
+;  instruction[17] ; clock      ; 19.038 ; 19.038 ; Rise       ; clock           ;
+;  instruction[18] ; clock      ; 18.182 ; 18.182 ; Rise       ; clock           ;
+;  instruction[19] ; clock      ; 18.686 ; 18.686 ; Rise       ; clock           ;
+;  instruction[20] ; clock      ; 14.785 ; 14.785 ; Rise       ; clock           ;
+;  instruction[21] ; clock      ; 18.045 ; 18.045 ; Rise       ; clock           ;
+;  instruction[22] ; clock      ; 18.276 ; 18.276 ; Rise       ; clock           ;
+;  instruction[23] ; clock      ; 18.764 ; 18.764 ; Rise       ; clock           ;
+;  instruction[24] ; clock      ; 18.289 ; 18.289 ; Rise       ; clock           ;
+;  instruction[25] ; clock      ; 15.463 ; 15.463 ; Rise       ; clock           ;
+; memToRead        ; clock      ; 8.683  ; 8.683  ; Rise       ; clock           ;
+; memWrite         ; clock      ; 8.432  ; 8.432  ; Rise       ; clock           ;
+; regDst           ; clock      ; 13.749 ; 13.749 ; Rise       ; clock           ;
+; regWrite         ; clock      ; 10.853 ; 10.853 ; Rise       ; clock           ;
++------------------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------------------------+
+; Hold Times                                                                     ;
++------------------+------------+--------+--------+------------+-----------------+
+; Data Port        ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++------------------+------------+--------+--------+------------+-----------------+
+; aluControl[*]    ; clock      ; -4.270 ; -4.270 ; Rise       ; clock           ;
+;  aluControl[0]   ; clock      ; -4.911 ; -4.911 ; Rise       ; clock           ;
+;  aluControl[1]   ; clock      ; -5.969 ; -5.969 ; Rise       ; clock           ;
+;  aluControl[2]   ; clock      ; -4.270 ; -4.270 ; Rise       ; clock           ;
+; aluSrc           ; clock      ; -6.217 ; -6.217 ; Rise       ; clock           ;
+; instruction[*]   ; clock      ; -4.866 ; -4.866 ; Rise       ; clock           ;
+;  instruction[0]  ; clock      ; -6.822 ; -6.822 ; Rise       ; clock           ;
+;  instruction[1]  ; clock      ; -6.998 ; -6.998 ; Rise       ; clock           ;
+;  instruction[2]  ; clock      ; -8.229 ; -8.229 ; Rise       ; clock           ;
+;  instruction[3]  ; clock      ; -7.038 ; -7.038 ; Rise       ; clock           ;
+;  instruction[4]  ; clock      ; -6.621 ; -6.621 ; Rise       ; clock           ;
+;  instruction[5]  ; clock      ; -7.723 ; -7.723 ; Rise       ; clock           ;
+;  instruction[6]  ; clock      ; -5.859 ; -5.859 ; Rise       ; clock           ;
+;  instruction[7]  ; clock      ; -7.079 ; -7.079 ; Rise       ; clock           ;
+;  instruction[8]  ; clock      ; -7.180 ; -7.180 ; Rise       ; clock           ;
+;  instruction[9]  ; clock      ; -7.409 ; -7.409 ; Rise       ; clock           ;
+;  instruction[10] ; clock      ; -7.591 ; -7.591 ; Rise       ; clock           ;
+;  instruction[11] ; clock      ; -6.645 ; -6.645 ; Rise       ; clock           ;
+;  instruction[12] ; clock      ; -7.132 ; -7.132 ; Rise       ; clock           ;
+;  instruction[13] ; clock      ; -6.658 ; -6.658 ; Rise       ; clock           ;
+;  instruction[14] ; clock      ; -7.952 ; -7.952 ; Rise       ; clock           ;
+;  instruction[15] ; clock      ; -5.772 ; -5.772 ; Rise       ; clock           ;
+;  instruction[16] ; clock      ; -5.274 ; -5.274 ; Rise       ; clock           ;
+;  instruction[17] ; clock      ; -6.154 ; -6.154 ; Rise       ; clock           ;
+;  instruction[18] ; clock      ; -4.894 ; -4.894 ; Rise       ; clock           ;
+;  instruction[19] ; clock      ; -5.708 ; -5.708 ; Rise       ; clock           ;
+;  instruction[20] ; clock      ; -4.866 ; -4.866 ; Rise       ; clock           ;
+;  instruction[21] ; clock      ; -6.583 ; -6.583 ; Rise       ; clock           ;
+;  instruction[22] ; clock      ; -7.015 ; -7.015 ; Rise       ; clock           ;
+;  instruction[23] ; clock      ; -7.433 ; -7.433 ; Rise       ; clock           ;
+;  instruction[24] ; clock      ; -7.365 ; -7.365 ; Rise       ; clock           ;
+;  instruction[25] ; clock      ; -6.493 ; -6.493 ; Rise       ; clock           ;
+; memToRead        ; clock      ; -3.948 ; -3.948 ; Rise       ; clock           ;
+; memWrite         ; clock      ; -5.310 ; -5.310 ; Rise       ; clock           ;
+; regDst           ; clock      ; -6.151 ; -6.151 ; Rise       ; clock           ;
+; regWrite         ; clock      ; -5.866 ; -5.866 ; Rise       ; clock           ;
++------------------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; zero      ; clock      ; 22.523 ; 22.523 ; Rise       ; clock           ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; zero      ; clock      ; 13.206 ; 13.206 ; Rise       ; clock           ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Propagation Delay                                                 ;
++-----------------+-------------+--------+--------+--------+--------+
+; Input Port      ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++-----------------+-------------+--------+--------+--------+--------+
+; aluControl[0]   ; zero        ; 22.750 ; 22.750 ; 22.750 ; 22.750 ;
+; aluControl[1]   ; zero        ; 21.891 ; 21.891 ; 21.891 ; 21.891 ;
+; aluControl[2]   ; zero        ; 18.038 ; 18.038 ; 18.038 ; 18.038 ;
+; aluSrc          ; zero        ; 23.802 ; 23.802 ; 23.802 ; 23.802 ;
+; instruction[0]  ; zero        ; 21.165 ; 21.165 ; 21.165 ; 21.165 ;
+; instruction[1]  ; zero        ; 21.481 ; 21.481 ; 21.481 ; 21.481 ;
+; instruction[2]  ; zero        ; 21.447 ; 21.447 ; 21.447 ; 21.447 ;
+; instruction[3]  ; zero        ; 21.364 ; 21.364 ; 21.364 ; 21.364 ;
+; instruction[4]  ; zero        ; 21.408 ; 21.408 ; 21.408 ; 21.408 ;
+; instruction[5]  ; zero        ; 20.328 ; 20.328 ; 20.328 ; 20.328 ;
+; instruction[6]  ; zero        ; 21.466 ; 21.466 ; 21.466 ; 21.466 ;
+; instruction[7]  ; zero        ; 21.041 ; 21.041 ; 21.041 ; 21.041 ;
+; instruction[8]  ; zero        ; 20.501 ; 20.501 ; 20.501 ; 20.501 ;
+; instruction[9]  ; zero        ; 20.774 ; 20.774 ; 20.774 ; 20.774 ;
+; instruction[10] ; zero        ; 20.861 ; 20.861 ; 20.861 ; 20.861 ;
+; instruction[11] ; zero        ; 19.938 ; 19.938 ; 19.938 ; 19.938 ;
+; instruction[12] ; zero        ; 20.143 ; 20.143 ; 20.143 ; 20.143 ;
+; instruction[13] ; zero        ; 20.109 ; 20.109 ; 20.109 ; 20.109 ;
+; instruction[14] ; zero        ; 20.214 ; 20.214 ; 20.214 ; 20.214 ;
+; instruction[15] ; zero        ; 20.383 ; 20.383 ; 20.383 ; 20.383 ;
+; instruction[16] ; zero        ; 26.526 ; 26.526 ; 26.526 ; 26.526 ;
+; instruction[17] ; zero        ; 27.955 ; 27.955 ; 27.955 ; 27.955 ;
+; instruction[18] ; zero        ; 26.543 ; 26.543 ; 26.543 ; 26.543 ;
+; instruction[19] ; zero        ; 27.505 ; 27.505 ; 27.505 ; 27.505 ;
+; instruction[20] ; zero        ; 22.932 ; 22.932 ; 22.932 ; 22.932 ;
+; instruction[21] ; zero        ; 26.331 ; 26.331 ; 26.331 ; 26.331 ;
+; instruction[22] ; zero        ; 26.842 ; 26.842 ; 26.842 ; 26.842 ;
+; instruction[23] ; zero        ; 25.928 ; 25.928 ; 25.928 ; 25.928 ;
+; instruction[24] ; zero        ; 25.615 ; 25.615 ; 25.615 ; 25.615 ;
+; instruction[25] ; zero        ; 22.472 ; 22.472 ; 22.472 ; 22.472 ;
++-----------------+-------------+--------+--------+--------+--------+
+
+
++-------------------------------------------------------------------+
+; Minimum Propagation Delay                                         ;
++-----------------+-------------+--------+--------+--------+--------+
+; Input Port      ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++-----------------+-------------+--------+--------+--------+--------+
+; aluControl[0]   ; zero        ; 14.453 ; 14.453 ; 14.453 ; 14.453 ;
+; aluControl[1]   ; zero        ; 15.392 ; 15.392 ; 15.392 ; 15.392 ;
+; aluControl[2]   ; zero        ; 14.030 ; 14.030 ; 14.030 ; 14.030 ;
+; aluSrc          ; zero        ; 15.423 ; 15.423 ; 15.423 ; 15.423 ;
+; instruction[0]  ; zero        ; 15.285 ; 15.285 ; 15.285 ; 15.285 ;
+; instruction[1]  ; zero        ; 15.366 ; 15.366 ; 15.366 ; 15.366 ;
+; instruction[2]  ; zero        ; 16.326 ; 16.326 ; 16.326 ; 16.326 ;
+; instruction[3]  ; zero        ; 16.442 ; 16.442 ; 16.442 ; 16.442 ;
+; instruction[4]  ; zero        ; 16.017 ; 16.017 ; 16.017 ; 16.017 ;
+; instruction[5]  ; zero        ; 16.428 ; 16.428 ; 16.428 ; 16.428 ;
+; instruction[6]  ; zero        ; 15.770 ; 15.770 ; 15.770 ; 15.770 ;
+; instruction[7]  ; zero        ; 17.041 ; 17.041 ; 17.041 ; 17.041 ;
+; instruction[8]  ; zero        ; 17.576 ; 17.576 ; 17.576 ; 17.576 ;
+; instruction[9]  ; zero        ; 17.901 ; 17.901 ; 17.901 ; 17.901 ;
+; instruction[10] ; zero        ; 17.988 ; 17.988 ; 17.988 ; 17.988 ;
+; instruction[11] ; zero        ; 17.157 ; 17.157 ; 17.157 ; 17.157 ;
+; instruction[12] ; zero        ; 16.508 ; 16.508 ; 16.508 ; 16.508 ;
+; instruction[13] ; zero        ; 15.997 ; 15.997 ; 15.997 ; 15.997 ;
+; instruction[14] ; zero        ; 17.787 ; 17.787 ; 17.787 ; 17.787 ;
+; instruction[15] ; zero        ; 14.836 ; 14.836 ; 14.836 ; 14.836 ;
+; instruction[16] ; zero        ; 16.606 ; 16.606 ; 16.606 ; 16.606 ;
+; instruction[17] ; zero        ; 18.000 ; 18.000 ; 18.000 ; 18.000 ;
+; instruction[18] ; zero        ; 17.473 ; 17.473 ; 17.473 ; 17.473 ;
+; instruction[19] ; zero        ; 17.745 ; 17.745 ; 17.745 ; 17.745 ;
+; instruction[20] ; zero        ; 16.536 ; 16.536 ; 16.536 ; 16.536 ;
+; instruction[21] ; zero        ; 16.279 ; 16.279 ; 16.279 ; 16.279 ;
+; instruction[22] ; zero        ; 16.391 ; 16.391 ; 16.391 ; 16.391 ;
+; instruction[23] ; zero        ; 17.052 ; 17.052 ; 17.052 ; 17.052 ;
+; instruction[24] ; zero        ; 16.616 ; 16.616 ; 16.616 ; 16.616 ;
+; instruction[25] ; zero        ; 16.196 ; 16.196 ; 16.196 ; 16.196 ;
++-----------------+-------------+--------+--------+--------+--------+
+
+
++--------------------------------+
+; Fast Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clock ; -5.239 ; -9224.121     ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Fast Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clock ; 0.774 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clock ; -1.380 ; -2049.380             ;
++-------+--------+-----------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clock'                                                                                                                              ;
++--------+------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                          ; To Node                            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
+; -5.239 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~276 ; clock        ; clock       ; 1.000        ; -0.030     ; 6.241      ;
+; -5.238 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~308 ; clock        ; clock       ; 1.000        ; -0.030     ; 6.240      ;
+; -5.222 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~855 ; clock        ; clock       ; 1.000        ; -0.038     ; 6.216      ;
+; -5.221 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~279 ; clock        ; clock       ; 1.000        ; -0.043     ; 6.210      ;
+; -5.219 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~599 ; clock        ; clock       ; 1.000        ; -0.038     ; 6.213      ;
+; -5.213 ; RegisterFile:regFile|registers~713 ; RegisterFile:regFile|registers~664 ; clock        ; clock       ; 1.000        ; -0.004     ; 6.241      ;
+; -5.203 ; RegisterFile:regFile|registers~649 ; RegisterFile:regFile|registers~664 ; clock        ; clock       ; 1.000        ; 0.005      ; 6.240      ;
+; -5.169 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~703 ; clock        ; clock       ; 1.000        ; -0.029     ; 6.172      ;
+; -5.166 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~607 ; clock        ; clock       ; 1.000        ; -0.022     ; 6.176      ;
+; -5.165 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~863 ; clock        ; clock       ; 1.000        ; -0.022     ; 6.175      ;
+; -5.153 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~151 ; clock        ; clock       ; 1.000        ; -0.009     ; 6.176      ;
+; -5.153 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~183 ; clock        ; clock       ; 1.000        ; -0.009     ; 6.176      ;
+; -5.149 ; RegisterFile:regFile|registers~38  ; RegisterFile:regFile|registers~664 ; clock        ; clock       ; 1.000        ; -0.009     ; 6.172      ;
+; -5.146 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~581 ; clock        ; clock       ; 1.000        ; -0.038     ; 6.140      ;
+; -5.146 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~869 ; clock        ; clock       ; 1.000        ; -0.035     ; 6.143      ;
+; -5.145 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~647 ; clock        ; clock       ; 1.000        ; -0.021     ; 6.156      ;
+; -5.145 ; RegisterFile:regFile|registers~202 ; RegisterFile:regFile|registers~664 ; clock        ; clock       ; 1.000        ; -0.007     ; 6.170      ;
+; -5.144 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~903 ; clock        ; clock       ; 1.000        ; -0.021     ; 6.155      ;
+; -5.143 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~613 ; clock        ; clock       ; 1.000        ; -0.035     ; 6.140      ;
+; -5.142 ; RegisterFile:regFile|registers~4   ; RegisterFile:regFile|registers~664 ; clock        ; clock       ; 1.000        ; 0.018      ; 6.192      ;
+; -5.137 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~997 ; clock        ; clock       ; 1.000        ; -0.007     ; 6.162      ;
+; -5.135 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~664 ; clock        ; clock       ; 1.000        ; -0.016     ; 6.151      ;
+; -5.131 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~660 ; clock        ; clock       ; 1.000        ; -0.016     ; 6.147      ;
+; -5.131 ; RegisterFile:regFile|registers~809 ; RegisterFile:regFile|registers~664 ; clock        ; clock       ; 1.000        ; 0.000      ; 6.163      ;
+; -5.129 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~727 ; clock        ; clock       ; 1.000        ; -0.040     ; 6.121      ;
+; -5.129 ; RegisterFile:regFile|registers~73  ; RegisterFile:regFile|registers~664 ; clock        ; clock       ; 1.000        ; -0.014     ; 6.147      ;
+; -5.128 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~983 ; clock        ; clock       ; 1.000        ; -0.044     ; 6.116      ;
+; -5.122 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~479 ; clock        ; clock       ; 1.000        ; -0.005     ; 6.149      ;
+; -5.121 ; RegisterFile:regFile|registers~6   ; RegisterFile:regFile|registers~664 ; clock        ; clock       ; 1.000        ; -0.009     ; 6.144      ;
+; -5.114 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~723 ; clock        ; clock       ; 1.000        ; -0.012     ; 6.134      ;
+; -5.110 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~837 ; clock        ; clock       ; 1.000        ; -0.028     ; 6.114      ;
+; -5.109 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~741 ; clock        ; clock       ; 1.000        ; -0.031     ; 6.110      ;
+; -5.109 ; RegisterFile:regFile|registers~521 ; RegisterFile:regFile|registers~664 ; clock        ; clock       ; 1.000        ; -0.013     ; 6.128      ;
+; -5.105 ; RegisterFile:regFile|registers~585 ; RegisterFile:regFile|registers~664 ; clock        ; clock       ; 1.000        ; -0.005     ; 6.132      ;
+; -5.103 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~31  ; clock        ; clock       ; 1.000        ; -0.007     ; 6.128      ;
+; -5.103 ; RegisterFile:regFile|registers~9   ; RegisterFile:regFile|registers~664 ; clock        ; clock       ; 1.000        ; -0.014     ; 6.121      ;
+; -5.102 ; RegisterFile:regFile|registers~834 ; RegisterFile:regFile|registers~855 ; clock        ; clock       ; 1.000        ; -0.007     ; 6.127      ;
+; -5.101 ; RegisterFile:regFile|registers~834 ; RegisterFile:regFile|registers~279 ; clock        ; clock       ; 1.000        ; -0.012     ; 6.121      ;
+; -5.100 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~52  ; clock        ; clock       ; 1.000        ; -0.020     ; 6.112      ;
+; -5.100 ; RegisterFile:regFile|registers~713 ; RegisterFile:regFile|registers~600 ; clock        ; clock       ; 1.000        ; 0.001      ; 6.133      ;
+; -5.100 ; RegisterFile:regFile|registers~672 ; RegisterFile:regFile|registers~276 ; clock        ; clock       ; 1.000        ; 0.005      ; 6.137      ;
+; -5.099 ; RegisterFile:regFile|registers~713 ; RegisterFile:regFile|registers~856 ; clock        ; clock       ; 1.000        ; 0.001      ; 6.132      ;
+; -5.099 ; RegisterFile:regFile|registers~672 ; RegisterFile:regFile|registers~308 ; clock        ; clock       ; 1.000        ; 0.005      ; 6.136      ;
+; -5.099 ; RegisterFile:regFile|registers~834 ; RegisterFile:regFile|registers~599 ; clock        ; clock       ; 1.000        ; -0.007     ; 6.124      ;
+; -5.098 ; RegisterFile:regFile|registers~169 ; RegisterFile:regFile|registers~664 ; clock        ; clock       ; 1.000        ; -0.007     ; 6.123      ;
+; -5.097 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~485 ; clock        ; clock       ; 1.000        ; -0.023     ; 6.106      ;
+; -5.097 ; RegisterFile:regFile|registers~161 ; RegisterFile:regFile|registers~276 ; clock        ; clock       ; 1.000        ; -0.029     ; 6.100      ;
+; -5.096 ; RegisterFile:regFile|registers~161 ; RegisterFile:regFile|registers~308 ; clock        ; clock       ; 1.000        ; -0.029     ; 6.099      ;
+; -5.095 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~37  ; clock        ; clock       ; 1.000        ; -0.020     ; 6.107      ;
+; -5.094 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~453 ; clock        ; clock       ; 1.000        ; -0.023     ; 6.103      ;
+; -5.092 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~627 ; clock        ; clock       ; 1.000        ; -0.008     ; 6.116      ;
+; -5.092 ; RegisterFile:regFile|registers~713 ; RegisterFile:regFile|registers~792 ; clock        ; clock       ; 1.000        ; 0.001      ; 6.125      ;
+; -5.092 ; RegisterFile:regFile|registers~713 ; RegisterFile:regFile|registers~536 ; clock        ; clock       ; 1.000        ; 0.001      ; 6.125      ;
+; -5.092 ; RegisterFile:regFile|registers~705 ; RegisterFile:regFile|registers~276 ; clock        ; clock       ; 1.000        ; -0.009     ; 6.115      ;
+; -5.092 ; RegisterFile:regFile|registers~196 ; RegisterFile:regFile|registers~664 ; clock        ; clock       ; 1.000        ; 0.007      ; 6.131      ;
+; -5.092 ; RegisterFile:regFile|registers~68  ; RegisterFile:regFile|registers~664 ; clock        ; clock       ; 1.000        ; 0.005      ; 6.129      ;
+; -5.092 ; RegisterFile:regFile|registers~36  ; RegisterFile:regFile|registers~664 ; clock        ; clock       ; 1.000        ; 0.018      ; 6.142      ;
+; -5.091 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~101 ; clock        ; clock       ; 1.000        ; -0.020     ; 6.103      ;
+; -5.091 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~883 ; clock        ; clock       ; 1.000        ; -0.008     ; 6.115      ;
+; -5.091 ; RegisterFile:regFile|registers~705 ; RegisterFile:regFile|registers~308 ; clock        ; clock       ; 1.000        ; -0.009     ; 6.114      ;
+; -5.090 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~575 ; clock        ; clock       ; 1.000        ; -0.029     ; 6.093      ;
+; -5.090 ; RegisterFile:regFile|registers~587 ; RegisterFile:regFile|registers~664 ; clock        ; clock       ; 1.000        ; -0.014     ; 6.108      ;
+; -5.090 ; RegisterFile:regFile|registers~649 ; RegisterFile:regFile|registers~600 ; clock        ; clock       ; 1.000        ; 0.010      ; 6.132      ;
+; -5.089 ; RegisterFile:regFile|registers~649 ; RegisterFile:regFile|registers~856 ; clock        ; clock       ; 1.000        ; 0.010      ; 6.131      ;
+; -5.087 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~348 ; clock        ; clock       ; 1.000        ; -0.032     ; 6.087      ;
+; -5.085 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~517 ; clock        ; clock       ; 1.000        ; -0.003     ; 6.114      ;
+; -5.085 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~604 ; clock        ; clock       ; 1.000        ; -0.022     ; 6.095      ;
+; -5.085 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~860 ; clock        ; clock       ; 1.000        ; -0.022     ; 6.095      ;
+; -5.083 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~132 ; clock        ; clock       ; 1.000        ; -0.023     ; 6.092      ;
+; -5.083 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~380 ; clock        ; clock       ; 1.000        ; -0.032     ; 6.083      ;
+; -5.083 ; RegisterFile:regFile|registers~672 ; RegisterFile:regFile|registers~855 ; clock        ; clock       ; 1.000        ; -0.003     ; 6.112      ;
+; -5.082 ; RegisterFile:regFile|registers~672 ; RegisterFile:regFile|registers~279 ; clock        ; clock       ; 1.000        ; -0.008     ; 6.106      ;
+; -5.082 ; RegisterFile:regFile|registers~649 ; RegisterFile:regFile|registers~792 ; clock        ; clock       ; 1.000        ; 0.010      ; 6.124      ;
+; -5.082 ; RegisterFile:regFile|registers~649 ; RegisterFile:regFile|registers~536 ; clock        ; clock       ; 1.000        ; 0.010      ; 6.124      ;
+; -5.081 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~196 ; clock        ; clock       ; 1.000        ; -0.023     ; 6.090      ;
+; -5.081 ; RegisterFile:regFile|registers~427 ; RegisterFile:regFile|registers~664 ; clock        ; clock       ; 1.000        ; -0.015     ; 6.098      ;
+; -5.080 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~645 ; clock        ; clock       ; 1.000        ; -0.003     ; 6.109      ;
+; -5.080 ; RegisterFile:regFile|registers~161 ; RegisterFile:regFile|registers~855 ; clock        ; clock       ; 1.000        ; -0.037     ; 6.075      ;
+; -5.080 ; RegisterFile:regFile|registers~672 ; RegisterFile:regFile|registers~599 ; clock        ; clock       ; 1.000        ; -0.003     ; 6.109      ;
+; -5.079 ; RegisterFile:regFile|registers~161 ; RegisterFile:regFile|registers~279 ; clock        ; clock       ; 1.000        ; -0.042     ; 6.069      ;
+; -5.077 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~906 ; clock        ; clock       ; 1.000        ; -0.033     ; 6.076      ;
+; -5.077 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~375 ; clock        ; clock       ; 1.000        ; -0.030     ; 6.079      ;
+; -5.077 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~311 ; clock        ; clock       ; 1.000        ; -0.030     ; 6.079      ;
+; -5.077 ; RegisterFile:regFile|registers~161 ; RegisterFile:regFile|registers~599 ; clock        ; clock       ; 1.000        ; -0.037     ; 6.072      ;
+; -5.075 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~933 ; clock        ; clock       ; 1.000        ; -0.044     ; 6.063      ;
+; -5.075 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~773 ; clock        ; clock       ; 1.000        ; -0.003     ; 6.104      ;
+; -5.075 ; RegisterFile:regFile|registers~705 ; RegisterFile:regFile|registers~855 ; clock        ; clock       ; 1.000        ; -0.017     ; 6.090      ;
+; -5.074 ; RegisterFile:regFile|registers~705 ; RegisterFile:regFile|registers~279 ; clock        ; clock       ; 1.000        ; -0.022     ; 6.084      ;
+; -5.074 ; RegisterFile:regFile|registers~768 ; RegisterFile:regFile|registers~276 ; clock        ; clock       ; 1.000        ; -0.001     ; 6.105      ;
+; -5.073 ; RegisterFile:regFile|registers~768 ; RegisterFile:regFile|registers~308 ; clock        ; clock       ; 1.000        ; -0.001     ; 6.104      ;
+; -5.072 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~585 ; clock        ; clock       ; 1.000        ; -0.011     ; 6.093      ;
+; -5.072 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~841 ; clock        ; clock       ; 1.000        ; -0.011     ; 6.093      ;
+; -5.072 ; RegisterFile:regFile|registers~705 ; RegisterFile:regFile|registers~599 ; clock        ; clock       ; 1.000        ; -0.017     ; 6.087      ;
+; -5.071 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~901 ; clock        ; clock       ; 1.000        ; -0.003     ; 6.100      ;
+; -5.071 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~663 ; clock        ; clock       ; 1.000        ; -0.016     ; 6.087      ;
+; -5.071 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~668 ; clock        ; clock       ; 1.000        ; -0.033     ; 6.070      ;
+; -5.070 ; RegisterFile:regFile|registers~137 ; RegisterFile:regFile|registers~664 ; clock        ; clock       ; 1.000        ; -0.007     ; 6.095      ;
+; -5.069 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~535 ; clock        ; clock       ; 1.000        ; -0.016     ; 6.085      ;
+; -5.069 ; RegisterFile:regFile|registers~548 ; RegisterFile:regFile|registers~664 ; clock        ; clock       ; 1.000        ; 0.019      ; 6.120      ;
+; -5.068 ; RegisterFile:regFile|registers~321 ; RegisterFile:regFile|registers~133 ; clock        ; clock       ; 1.000        ; -0.005     ; 6.095      ;
++--------+------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'clock'                                                                                                                               ;
++-------+-------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                           ; To Node                            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.774 ; DataMemory:dmem|dmem~757            ; RegisterFile:regFile|registers~725 ; clock        ; clock       ; 0.000        ; 0.012      ; 0.938      ;
+; 0.828 ; RegisterFile:regFile|registers~730  ; DataMemory:dmem|dmem~922           ; clock        ; clock       ; 0.000        ; 0.022      ; 1.002      ;
+; 0.894 ; DataMemory:dmem|dmem~886            ; RegisterFile:regFile|registers~726 ; clock        ; clock       ; 0.000        ; 0.000      ; 1.046      ;
+; 0.932 ; DataMemory:dmem|dmem~1008           ; RegisterFile:regFile|registers~720 ; clock        ; clock       ; 0.000        ; 0.000      ; 1.084      ;
+; 0.983 ; DataMemory:dmem|dmem~326            ; RegisterFile:regFile|registers~710 ; clock        ; clock       ; 0.000        ; 0.010      ; 1.145      ;
+; 1.002 ; DataMemory:dmem|dmem~1013           ; RegisterFile:regFile|registers~725 ; clock        ; clock       ; 0.000        ; 0.012      ; 1.166      ;
+; 1.004 ; DataMemory:dmem|dmem~870            ; RegisterFile:regFile|registers~710 ; clock        ; clock       ; 0.000        ; 0.000      ; 1.156      ;
+; 1.012 ; DataMemory:dmem|dmem~436            ; RegisterFile:regFile|registers~724 ; clock        ; clock       ; 0.000        ; 0.012      ; 1.176      ;
+; 1.017 ; RegisterFile:regFile|registers~941  ; DataMemory:dmem|dmem~781           ; clock        ; clock       ; 0.000        ; 0.000      ; 1.169      ;
+; 1.018 ; RegisterFile:regFile|registers~941  ; DataMemory:dmem|dmem~909           ; clock        ; clock       ; 0.000        ; 0.000      ; 1.170      ;
+; 1.023 ; DataMemory:dmem|dmem~757            ; RegisterFile:regFile|registers~981 ; clock        ; clock       ; 0.000        ; 0.012      ; 1.187      ;
+; 1.050 ; DataMemory:dmem|dmem~917            ; RegisterFile:regFile|registers~725 ; clock        ; clock       ; 0.000        ; 0.018      ; 1.220      ;
+; 1.051 ; DataMemory:dmem|dmem~934            ; RegisterFile:regFile|registers~710 ; clock        ; clock       ; 0.000        ; 0.000      ; 1.203      ;
+; 1.052 ; DataMemory:dmem|dmem~1010           ; RegisterFile:regFile|registers~722 ; clock        ; clock       ; 0.000        ; 0.000      ; 1.204      ;
+; 1.054 ; DataMemory:dmem|dmem~892            ; RegisterFile:regFile|registers~508 ; clock        ; clock       ; 0.000        ; 0.002      ; 1.208      ;
+; 1.066 ; DataMemory:dmem|dmem~926            ; RegisterFile:regFile|registers~510 ; clock        ; clock       ; 0.000        ; -0.005     ; 1.213      ;
+; 1.083 ; DataMemory:dmem|dmem~230            ; RegisterFile:regFile|registers~710 ; clock        ; clock       ; 0.000        ; -0.006     ; 1.229      ;
+; 1.101 ; DataMemory:dmem|dmem~446            ; RegisterFile:regFile|registers~510 ; clock        ; clock       ; 0.000        ; -0.007     ; 1.246      ;
+; 1.109 ; DataMemory:dmem|dmem~422            ; RegisterFile:regFile|registers~710 ; clock        ; clock       ; 0.000        ; -0.009     ; 1.252      ;
+; 1.111 ; DataMemory:dmem|dmem~927            ; RegisterFile:regFile|registers~511 ; clock        ; clock       ; 0.000        ; -0.003     ; 1.260      ;
+; 1.111 ; DataMemory:dmem|dmem~981            ; RegisterFile:regFile|registers~725 ; clock        ; clock       ; 0.000        ; 0.032      ; 1.295      ;
+; 1.119 ; DataMemory:dmem|dmem~970            ; RegisterFile:regFile|registers~714 ; clock        ; clock       ; 0.000        ; 0.020      ; 1.291      ;
+; 1.136 ; DataMemory:dmem|dmem~693            ; RegisterFile:regFile|registers~725 ; clock        ; clock       ; 0.000        ; 0.050      ; 1.338      ;
+; 1.136 ; DataMemory:dmem|dmem~902            ; RegisterFile:regFile|registers~710 ; clock        ; clock       ; 0.000        ; -0.003     ; 1.285      ;
+; 1.137 ; DataMemory:dmem|dmem~461            ; RegisterFile:regFile|registers~685 ; clock        ; clock       ; 0.000        ; 0.006      ; 1.295      ;
+; 1.138 ; DataMemory:dmem|dmem~732            ; RegisterFile:regFile|registers~508 ; clock        ; clock       ; 0.000        ; 0.033      ; 1.323      ;
+; 1.144 ; DataMemory:dmem|dmem~802            ; RegisterFile:regFile|registers~706 ; clock        ; clock       ; 0.000        ; 0.012      ; 1.308      ;
+; 1.145 ; DataMemory:dmem|dmem~866            ; RegisterFile:regFile|registers~706 ; clock        ; clock       ; 0.000        ; 0.009      ; 1.306      ;
+; 1.146 ; DataMemory:dmem|dmem~845            ; RegisterFile:regFile|registers~685 ; clock        ; clock       ; 0.000        ; 0.000      ; 1.298      ;
+; 1.150 ; DataMemory:dmem|dmem~322            ; RegisterFile:regFile|registers~706 ; clock        ; clock       ; 0.000        ; 0.019      ; 1.321      ;
+; 1.156 ; RegisterFile:regFile|registers~249  ; DataMemory:dmem|dmem~505           ; clock        ; clock       ; 0.000        ; -0.005     ; 1.303      ;
+; 1.164 ; RegisterFile:regFile|registers~1018 ; DataMemory:dmem|dmem~922           ; clock        ; clock       ; 0.000        ; 0.023      ; 1.339      ;
+; 1.166 ; DataMemory:dmem|dmem~614            ; RegisterFile:regFile|registers~710 ; clock        ; clock       ; 0.000        ; 0.000      ; 1.318      ;
+; 1.167 ; DataMemory:dmem|dmem~855            ; RegisterFile:regFile|registers~695 ; clock        ; clock       ; 0.000        ; 0.012      ; 1.331      ;
+; 1.170 ; DataMemory:dmem|dmem~959            ; RegisterFile:regFile|registers~511 ; clock        ; clock       ; 0.000        ; 0.009      ; 1.331      ;
+; 1.172 ; RegisterFile:regFile|registers~372  ; DataMemory:dmem|dmem~500           ; clock        ; clock       ; 0.000        ; -0.013     ; 1.311      ;
+; 1.176 ; RegisterFile:regFile|registers~761  ; DataMemory:dmem|dmem~505           ; clock        ; clock       ; 0.000        ; 0.000      ; 1.328      ;
+; 1.183 ; RegisterFile:regFile|registers~884  ; DataMemory:dmem|dmem~500           ; clock        ; clock       ; 0.000        ; -0.009     ; 1.326      ;
+; 1.185 ; RegisterFile:regFile|registers~704  ; DataMemory:dmem|dmem~480           ; clock        ; clock       ; 0.000        ; 0.021      ; 1.358      ;
+; 1.190 ; DataMemory:dmem|dmem~650            ; RegisterFile:regFile|registers~714 ; clock        ; clock       ; 0.000        ; 0.004      ; 1.346      ;
+; 1.191 ; RegisterFile:regFile|registers~941  ; DataMemory:dmem|dmem~493           ; clock        ; clock       ; 0.000        ; -0.010     ; 1.333      ;
+; 1.192 ; DataMemory:dmem|dmem~859            ; RegisterFile:regFile|registers~507 ; clock        ; clock       ; 0.000        ; 0.000      ; 1.344      ;
+; 1.194 ; DataMemory:dmem|dmem~924            ; RegisterFile:regFile|registers~508 ; clock        ; clock       ; 0.000        ; 0.000      ; 1.346      ;
+; 1.199 ; DataMemory:dmem|dmem~898            ; RegisterFile:regFile|registers~706 ; clock        ; clock       ; 0.000        ; 0.004      ; 1.355      ;
+; 1.200 ; DataMemory:dmem|dmem~789            ; RegisterFile:regFile|registers~725 ; clock        ; clock       ; 0.000        ; 0.018      ; 1.370      ;
+; 1.200 ; RegisterFile:regFile|registers~697  ; DataMemory:dmem|dmem~505           ; clock        ; clock       ; 0.000        ; 0.001      ; 1.353      ;
+; 1.203 ; RegisterFile:regFile|registers~1017 ; DataMemory:dmem|dmem~505           ; clock        ; clock       ; 0.000        ; 0.000      ; 1.355      ;
+; 1.205 ; DataMemory:dmem|dmem~348            ; RegisterFile:regFile|registers~508 ; clock        ; clock       ; 0.000        ; 0.000      ; 1.357      ;
+; 1.211 ; DataMemory:dmem|dmem~899            ; RegisterFile:regFile|registers~675 ; clock        ; clock       ; 0.000        ; 0.001      ; 1.364      ;
+; 1.211 ; DataMemory:dmem|dmem~118            ; RegisterFile:regFile|registers~726 ; clock        ; clock       ; 0.000        ; 0.028      ; 1.391      ;
+; 1.213 ; DataMemory:dmem|dmem~1015           ; RegisterFile:regFile|registers~695 ; clock        ; clock       ; 0.000        ; 0.018      ; 1.383      ;
+; 1.216 ; DataMemory:dmem|dmem~636            ; RegisterFile:regFile|registers~508 ; clock        ; clock       ; 0.000        ; 0.002      ; 1.370      ;
+; 1.216 ; DataMemory:dmem|dmem~706            ; RegisterFile:regFile|registers~706 ; clock        ; clock       ; 0.000        ; 0.037      ; 1.405      ;
+; 1.217 ; DataMemory:dmem|dmem~473            ; RegisterFile:regFile|registers~505 ; clock        ; clock       ; 0.000        ; 0.006      ; 1.375      ;
+; 1.218 ; DataMemory:dmem|dmem~469            ; RegisterFile:regFile|registers~725 ; clock        ; clock       ; 0.000        ; 0.034      ; 1.404      ;
+; 1.221 ; DataMemory:dmem|dmem~984            ; RegisterFile:regFile|registers~632 ; clock        ; clock       ; 0.000        ; 0.015      ; 1.388      ;
+; 1.221 ; RegisterFile:regFile|registers~986  ; DataMemory:dmem|dmem~922           ; clock        ; clock       ; 0.000        ; 0.023      ; 1.396      ;
+; 1.222 ; DataMemory:dmem|dmem~928            ; RegisterFile:regFile|registers~832 ; clock        ; clock       ; 0.000        ; 0.000      ; 1.374      ;
+; 1.228 ; DataMemory:dmem|dmem~324            ; RegisterFile:regFile|registers~804 ; clock        ; clock       ; 0.000        ; -0.024     ; 1.356      ;
+; 1.228 ; DataMemory:dmem|dmem~1008           ; RegisterFile:regFile|registers~112 ; clock        ; clock       ; 0.000        ; -0.001     ; 1.379      ;
+; 1.228 ; DataMemory:dmem|dmem~1008           ; RegisterFile:regFile|registers~80  ; clock        ; clock       ; 0.000        ; -0.001     ; 1.379      ;
+; 1.229 ; DataMemory:dmem|dmem~451            ; RegisterFile:regFile|registers~675 ; clock        ; clock       ; 0.000        ; -0.006     ; 1.375      ;
+; 1.229 ; DataMemory:dmem|dmem~888            ; RegisterFile:regFile|registers~632 ; clock        ; clock       ; 0.000        ; 0.015      ; 1.396      ;
+; 1.231 ; RegisterFile:regFile|registers~837  ; DataMemory:dmem|dmem~485           ; clock        ; clock       ; 0.000        ; 0.004      ; 1.387      ;
+; 1.231 ; DataMemory:dmem|dmem~542            ; RegisterFile:regFile|registers~510 ; clock        ; clock       ; 0.000        ; -0.005     ; 1.378      ;
+; 1.232 ; DataMemory:dmem|dmem~324            ; RegisterFile:regFile|registers~932 ; clock        ; clock       ; 0.000        ; -0.024     ; 1.360      ;
+; 1.235 ; DataMemory:dmem|dmem~710            ; RegisterFile:regFile|registers~710 ; clock        ; clock       ; 0.000        ; -0.020     ; 1.367      ;
+; 1.240 ; DataMemory:dmem|dmem~857            ; RegisterFile:regFile|registers~505 ; clock        ; clock       ; 0.000        ; 0.000      ; 1.392      ;
+; 1.245 ; RegisterFile:regFile|registers~475  ; DataMemory:dmem|dmem~251           ; clock        ; clock       ; 0.000        ; -0.001     ; 1.396      ;
+; 1.246 ; RegisterFile:regFile|registers~996  ; DataMemory:dmem|dmem~484           ; clock        ; clock       ; 0.000        ; 0.007      ; 1.405      ;
+; 1.249 ; DataMemory:dmem|dmem~223            ; RegisterFile:regFile|registers~511 ; clock        ; clock       ; 0.000        ; -0.013     ; 1.388      ;
+; 1.250 ; DataMemory:dmem|dmem~763            ; RegisterFile:regFile|registers~507 ; clock        ; clock       ; 0.000        ; 0.016      ; 1.418      ;
+; 1.251 ; RegisterFile:regFile|registers~446  ; DataMemory:dmem|dmem~510           ; clock        ; clock       ; 0.000        ; 0.000      ; 1.403      ;
+; 1.251 ; DataMemory:dmem|dmem~1013           ; RegisterFile:regFile|registers~981 ; clock        ; clock       ; 0.000        ; 0.012      ; 1.415      ;
+; 1.253 ; DataMemory:dmem|dmem~459            ; RegisterFile:regFile|registers~683 ; clock        ; clock       ; 0.000        ; 0.006      ; 1.411      ;
+; 1.253 ; DataMemory:dmem|dmem~459            ; RegisterFile:regFile|registers~395 ; clock        ; clock       ; 0.000        ; 0.006      ; 1.411      ;
+; 1.255 ; RegisterFile:regFile|registers~933  ; DataMemory:dmem|dmem~485           ; clock        ; clock       ; 0.000        ; 0.020      ; 1.427      ;
+; 1.259 ; RegisterFile:regFile|registers~116  ; DataMemory:dmem|dmem~500           ; clock        ; clock       ; 0.000        ; 0.005      ; 1.416      ;
+; 1.259 ; RegisterFile:regFile|registers~864  ; DataMemory:dmem|dmem~480           ; clock        ; clock       ; 0.000        ; 0.007      ; 1.418      ;
+; 1.261 ; DataMemory:dmem|dmem~951            ; RegisterFile:regFile|registers~695 ; clock        ; clock       ; 0.000        ; 0.035      ; 1.448      ;
+; 1.263 ; DataMemory:dmem|dmem~414            ; RegisterFile:regFile|registers~510 ; clock        ; clock       ; 0.000        ; -0.007     ; 1.408      ;
+; 1.264 ; DataMemory:dmem|dmem~749            ; RegisterFile:regFile|registers~685 ; clock        ; clock       ; 0.000        ; 0.016      ; 1.432      ;
+; 1.264 ; RegisterFile:regFile|registers~251  ; DataMemory:dmem|dmem~251           ; clock        ; clock       ; 0.000        ; -0.006     ; 1.410      ;
+; 1.264 ; RegisterFile:regFile|registers~992  ; DataMemory:dmem|dmem~480           ; clock        ; clock       ; 0.000        ; 0.007      ; 1.423      ;
+; 1.265 ; DataMemory:dmem|dmem~918            ; RegisterFile:regFile|registers~726 ; clock        ; clock       ; 0.000        ; 0.026      ; 1.443      ;
+; 1.267 ; DataMemory:dmem|dmem~1008           ; RegisterFile:regFile|registers~432 ; clock        ; clock       ; 0.000        ; -0.005     ; 1.414      ;
+; 1.269 ; DataMemory:dmem|dmem~390            ; RegisterFile:regFile|registers~710 ; clock        ; clock       ; 0.000        ; -0.009     ; 1.412      ;
+; 1.273 ; DataMemory:dmem|dmem~543            ; RegisterFile:regFile|registers~511 ; clock        ; clock       ; 0.000        ; -0.003     ; 1.422      ;
+; 1.275 ; DataMemory:dmem|dmem~219            ; RegisterFile:regFile|registers~507 ; clock        ; clock       ; 0.000        ; 0.018      ; 1.445      ;
+; 1.277 ; DataMemory:dmem|dmem~884            ; RegisterFile:regFile|registers~724 ; clock        ; clock       ; 0.000        ; 0.037      ; 1.466      ;
+; 1.277 ; DataMemory:dmem|dmem~98             ; RegisterFile:regFile|registers~706 ; clock        ; clock       ; 0.000        ; 0.008      ; 1.437      ;
+; 1.279 ; DataMemory:dmem|dmem~629            ; RegisterFile:regFile|registers~725 ; clock        ; clock       ; 0.000        ; 0.037      ; 1.468      ;
+; 1.280 ; DataMemory:dmem|dmem~493            ; RegisterFile:regFile|registers~685 ; clock        ; clock       ; 0.000        ; 0.006      ; 1.438      ;
+; 1.282 ; RegisterFile:regFile|registers~372  ; DataMemory:dmem|dmem~1012          ; clock        ; clock       ; 0.000        ; -0.012     ; 1.422      ;
+; 1.282 ; DataMemory:dmem|dmem~739            ; RegisterFile:regFile|registers~675 ; clock        ; clock       ; 0.000        ; 0.010      ; 1.444      ;
+; 1.287 ; DataMemory:dmem|dmem~921            ; RegisterFile:regFile|registers~505 ; clock        ; clock       ; 0.000        ; 0.000      ; 1.439      ;
+; 1.291 ; DataMemory:dmem|dmem~418            ; RegisterFile:regFile|registers~706 ; clock        ; clock       ; 0.000        ; 0.000      ; 1.443      ;
+; 1.291 ; DataMemory:dmem|dmem~980            ; RegisterFile:regFile|registers~724 ; clock        ; clock       ; 0.000        ; 0.026      ; 1.469      ;
+; 1.293 ; DataMemory:dmem|dmem~442            ; RegisterFile:regFile|registers~506 ; clock        ; clock       ; 0.000        ; -0.005     ; 1.440      ;
+; 1.293 ; RegisterFile:regFile|registers~884  ; DataMemory:dmem|dmem~1012          ; clock        ; clock       ; 0.000        ; -0.008     ; 1.437      ;
++-------+-------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clock'                                                                    ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                    ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clock ; Rise       ; clock                     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~0    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~0    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~1    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~1    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~10   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~10   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~100  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~100  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~1000 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~1000 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~1001 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~1001 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~1002 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~1002 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~1003 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~1003 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~1004 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~1004 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~1005 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~1005 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~1006 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~1006 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~1007 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~1007 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~1008 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~1008 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~1009 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~1009 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~101  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~101  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~1010 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~1010 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~1011 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~1011 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~1012 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~1012 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~1013 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~1013 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~1014 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~1014 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~1015 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~1015 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~1016 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~1016 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~1017 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~1017 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~1018 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~1018 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~1019 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~1019 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~102  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~102  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~1020 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~1020 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~1021 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~1021 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~1022 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~1022 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~1023 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~1023 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~103  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~103  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~104  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~104  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~105  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~105  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~106  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~106  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~107  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~107  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~108  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~108  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~109  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~109  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~11   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~11   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~110  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~110  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~111  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~111  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~112  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~112  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~113  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~113  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~114  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~114  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~115  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~115  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~116  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~116  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~117  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~117  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~118  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~118  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~119  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~119  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~12   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; DataMemory:dmem|dmem~12   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; DataMemory:dmem|dmem~120  ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------+
+
+
++------------------------------------------------------------------------------+
+; Setup Times                                                                  ;
++------------------+------------+-------+-------+------------+-----------------+
+; Data Port        ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------------+------------+-------+-------+------------+-----------------+
+; aluControl[*]    ; clock      ; 7.337 ; 7.337 ; Rise       ; clock           ;
+;  aluControl[0]   ; clock      ; 7.337 ; 7.337 ; Rise       ; clock           ;
+;  aluControl[1]   ; clock      ; 7.067 ; 7.067 ; Rise       ; clock           ;
+;  aluControl[2]   ; clock      ; 6.300 ; 6.300 ; Rise       ; clock           ;
+; aluSrc           ; clock      ; 7.873 ; 7.873 ; Rise       ; clock           ;
+; instruction[*]   ; clock      ; 9.090 ; 9.090 ; Rise       ; clock           ;
+;  instruction[0]  ; clock      ; 6.668 ; 6.668 ; Rise       ; clock           ;
+;  instruction[1]  ; clock      ; 6.840 ; 6.840 ; Rise       ; clock           ;
+;  instruction[2]  ; clock      ; 6.825 ; 6.825 ; Rise       ; clock           ;
+;  instruction[3]  ; clock      ; 6.671 ; 6.671 ; Rise       ; clock           ;
+;  instruction[4]  ; clock      ; 6.139 ; 6.139 ; Rise       ; clock           ;
+;  instruction[5]  ; clock      ; 5.554 ; 5.554 ; Rise       ; clock           ;
+;  instruction[6]  ; clock      ; 6.050 ; 6.050 ; Rise       ; clock           ;
+;  instruction[7]  ; clock      ; 5.877 ; 5.877 ; Rise       ; clock           ;
+;  instruction[8]  ; clock      ; 5.598 ; 5.598 ; Rise       ; clock           ;
+;  instruction[9]  ; clock      ; 5.731 ; 5.731 ; Rise       ; clock           ;
+;  instruction[10] ; clock      ; 5.809 ; 5.809 ; Rise       ; clock           ;
+;  instruction[11] ; clock      ; 6.335 ; 6.335 ; Rise       ; clock           ;
+;  instruction[12] ; clock      ; 6.253 ; 6.253 ; Rise       ; clock           ;
+;  instruction[13] ; clock      ; 6.947 ; 6.947 ; Rise       ; clock           ;
+;  instruction[14] ; clock      ; 7.074 ; 7.074 ; Rise       ; clock           ;
+;  instruction[15] ; clock      ; 5.932 ; 5.932 ; Rise       ; clock           ;
+;  instruction[16] ; clock      ; 8.426 ; 8.426 ; Rise       ; clock           ;
+;  instruction[17] ; clock      ; 9.090 ; 9.090 ; Rise       ; clock           ;
+;  instruction[18] ; clock      ; 8.512 ; 8.512 ; Rise       ; clock           ;
+;  instruction[19] ; clock      ; 8.959 ; 8.959 ; Rise       ; clock           ;
+;  instruction[20] ; clock      ; 6.982 ; 6.982 ; Rise       ; clock           ;
+;  instruction[21] ; clock      ; 8.417 ; 8.417 ; Rise       ; clock           ;
+;  instruction[22] ; clock      ; 8.552 ; 8.552 ; Rise       ; clock           ;
+;  instruction[23] ; clock      ; 8.733 ; 8.733 ; Rise       ; clock           ;
+;  instruction[24] ; clock      ; 8.497 ; 8.497 ; Rise       ; clock           ;
+;  instruction[25] ; clock      ; 7.336 ; 7.336 ; Rise       ; clock           ;
+; memToRead        ; clock      ; 4.448 ; 4.448 ; Rise       ; clock           ;
+; memWrite         ; clock      ; 4.348 ; 4.348 ; Rise       ; clock           ;
+; regDst           ; clock      ; 6.911 ; 6.911 ; Rise       ; clock           ;
+; regWrite         ; clock      ; 5.477 ; 5.477 ; Rise       ; clock           ;
++------------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------------+
+; Hold Times                                                                     ;
++------------------+------------+--------+--------+------------+-----------------+
+; Data Port        ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++------------------+------------+--------+--------+------------+-----------------+
+; aluControl[*]    ; clock      ; -2.243 ; -2.243 ; Rise       ; clock           ;
+;  aluControl[0]   ; clock      ; -2.529 ; -2.529 ; Rise       ; clock           ;
+;  aluControl[1]   ; clock      ; -3.046 ; -3.046 ; Rise       ; clock           ;
+;  aluControl[2]   ; clock      ; -2.243 ; -2.243 ; Rise       ; clock           ;
+; aluSrc           ; clock      ; -3.168 ; -3.168 ; Rise       ; clock           ;
+; instruction[*]   ; clock      ; -2.515 ; -2.515 ; Rise       ; clock           ;
+;  instruction[0]  ; clock      ; -3.388 ; -3.388 ; Rise       ; clock           ;
+;  instruction[1]  ; clock      ; -3.503 ; -3.503 ; Rise       ; clock           ;
+;  instruction[2]  ; clock      ; -4.064 ; -4.064 ; Rise       ; clock           ;
+;  instruction[3]  ; clock      ; -3.511 ; -3.511 ; Rise       ; clock           ;
+;  instruction[4]  ; clock      ; -3.346 ; -3.346 ; Rise       ; clock           ;
+;  instruction[5]  ; clock      ; -3.738 ; -3.738 ; Rise       ; clock           ;
+;  instruction[6]  ; clock      ; -2.931 ; -2.931 ; Rise       ; clock           ;
+;  instruction[7]  ; clock      ; -3.449 ; -3.449 ; Rise       ; clock           ;
+;  instruction[8]  ; clock      ; -3.539 ; -3.539 ; Rise       ; clock           ;
+;  instruction[9]  ; clock      ; -3.652 ; -3.652 ; Rise       ; clock           ;
+;  instruction[10] ; clock      ; -3.736 ; -3.736 ; Rise       ; clock           ;
+;  instruction[11] ; clock      ; -3.263 ; -3.263 ; Rise       ; clock           ;
+;  instruction[12] ; clock      ; -3.499 ; -3.499 ; Rise       ; clock           ;
+;  instruction[13] ; clock      ; -3.295 ; -3.295 ; Rise       ; clock           ;
+;  instruction[14] ; clock      ; -3.897 ; -3.897 ; Rise       ; clock           ;
+;  instruction[15] ; clock      ; -2.945 ; -2.945 ; Rise       ; clock           ;
+;  instruction[16] ; clock      ; -2.684 ; -2.684 ; Rise       ; clock           ;
+;  instruction[17] ; clock      ; -3.087 ; -3.087 ; Rise       ; clock           ;
+;  instruction[18] ; clock      ; -2.515 ; -2.515 ; Rise       ; clock           ;
+;  instruction[19] ; clock      ; -2.905 ; -2.905 ; Rise       ; clock           ;
+;  instruction[20] ; clock      ; -2.546 ; -2.546 ; Rise       ; clock           ;
+;  instruction[21] ; clock      ; -3.199 ; -3.199 ; Rise       ; clock           ;
+;  instruction[22] ; clock      ; -3.424 ; -3.424 ; Rise       ; clock           ;
+;  instruction[23] ; clock      ; -3.697 ; -3.697 ; Rise       ; clock           ;
+;  instruction[24] ; clock      ; -3.647 ; -3.647 ; Rise       ; clock           ;
+;  instruction[25] ; clock      ; -3.260 ; -3.260 ; Rise       ; clock           ;
+; memToRead        ; clock      ; -2.147 ; -2.147 ; Rise       ; clock           ;
+; memWrite         ; clock      ; -2.882 ; -2.882 ; Rise       ; clock           ;
+; regDst           ; clock      ; -3.175 ; -3.175 ; Rise       ; clock           ;
+; regWrite         ; clock      ; -3.012 ; -3.012 ; Rise       ; clock           ;
++------------------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; zero      ; clock      ; 11.054 ; 11.054 ; Rise       ; clock           ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; zero      ; clock      ; 6.739 ; 6.739 ; Rise       ; clock           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Propagation Delay                                                 ;
++-----------------+-------------+--------+--------+--------+--------+
+; Input Port      ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++-----------------+-------------+--------+--------+--------+--------+
+; aluControl[0]   ; zero        ; 11.581 ; 11.581 ; 11.581 ; 11.581 ;
+; aluControl[1]   ; zero        ; 11.195 ; 11.195 ; 11.195 ; 11.195 ;
+; aluControl[2]   ; zero        ; 9.409  ; 9.409  ; 9.409  ; 9.409  ;
+; aluSrc          ; zero        ; 12.122 ; 12.122 ; 12.122 ; 12.122 ;
+; instruction[0]  ; zero        ; 10.795 ; 10.795 ; 10.795 ; 10.795 ;
+; instruction[1]  ; zero        ; 10.967 ; 10.967 ; 10.967 ; 10.967 ;
+; instruction[2]  ; zero        ; 10.969 ; 10.969 ; 10.969 ; 10.969 ;
+; instruction[3]  ; zero        ; 10.920 ; 10.920 ; 10.920 ; 10.920 ;
+; instruction[4]  ; zero        ; 10.980 ; 10.980 ; 10.980 ; 10.980 ;
+; instruction[5]  ; zero        ; 10.395 ; 10.395 ; 10.395 ; 10.395 ;
+; instruction[6]  ; zero        ; 10.891 ; 10.891 ; 10.891 ; 10.891 ;
+; instruction[7]  ; zero        ; 10.718 ; 10.718 ; 10.718 ; 10.718 ;
+; instruction[8]  ; zero        ; 10.439 ; 10.439 ; 10.439 ; 10.439 ;
+; instruction[9]  ; zero        ; 10.572 ; 10.572 ; 10.572 ; 10.572 ;
+; instruction[10] ; zero        ; 10.650 ; 10.650 ; 10.650 ; 10.650 ;
+; instruction[11] ; zero        ; 10.123 ; 10.123 ; 10.123 ; 10.123 ;
+; instruction[12] ; zero        ; 10.193 ; 10.193 ; 10.193 ; 10.193 ;
+; instruction[13] ; zero        ; 10.201 ; 10.201 ; 10.201 ; 10.201 ;
+; instruction[14] ; zero        ; 10.259 ; 10.259 ; 10.259 ; 10.259 ;
+; instruction[15] ; zero        ; 10.396 ; 10.396 ; 10.396 ; 10.396 ;
+; instruction[16] ; zero        ; 13.267 ; 13.267 ; 13.267 ; 13.267 ;
+; instruction[17] ; zero        ; 13.931 ; 13.931 ; 13.931 ; 13.931 ;
+; instruction[18] ; zero        ; 13.181 ; 13.181 ; 13.181 ; 13.181 ;
+; instruction[19] ; zero        ; 13.800 ; 13.800 ; 13.800 ; 13.800 ;
+; instruction[20] ; zero        ; 11.660 ; 11.660 ; 11.660 ; 11.660 ;
+; instruction[21] ; zero        ; 13.114 ; 13.114 ; 13.114 ; 13.114 ;
+; instruction[22] ; zero        ; 13.316 ; 13.316 ; 13.316 ; 13.316 ;
+; instruction[23] ; zero        ; 12.982 ; 12.982 ; 12.982 ; 12.982 ;
+; instruction[24] ; zero        ; 12.876 ; 12.876 ; 12.876 ; 12.876 ;
+; instruction[25] ; zero        ; 11.463 ; 11.463 ; 11.463 ; 11.463 ;
++-----------------+-------------+--------+--------+--------+--------+
+
+
++---------------------------------------------------------------+
+; Minimum Propagation Delay                                     ;
++-----------------+-------------+-------+-------+-------+-------+
+; Input Port      ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++-----------------+-------------+-------+-------+-------+-------+
+; aluControl[0]   ; zero        ; 7.635 ; 7.635 ; 7.635 ; 7.635 ;
+; aluControl[1]   ; zero        ; 8.063 ; 8.063 ; 8.063 ; 8.063 ;
+; aluControl[2]   ; zero        ; 7.457 ; 7.457 ; 7.457 ; 7.457 ;
+; aluSrc          ; zero        ; 8.116 ; 8.116 ; 8.116 ; 8.116 ;
+; instruction[0]  ; zero        ; 7.993 ; 7.993 ; 7.993 ; 7.993 ;
+; instruction[1]  ; zero        ; 8.076 ; 8.076 ; 8.076 ; 8.076 ;
+; instruction[2]  ; zero        ; 8.494 ; 8.494 ; 8.494 ; 8.494 ;
+; instruction[3]  ; zero        ; 8.562 ; 8.562 ; 8.562 ; 8.562 ;
+; instruction[4]  ; zero        ; 8.437 ; 8.437 ; 8.437 ; 8.437 ;
+; instruction[5]  ; zero        ; 8.545 ; 8.545 ; 8.545 ; 8.545 ;
+; instruction[6]  ; zero        ; 8.224 ; 8.224 ; 8.224 ; 8.224 ;
+; instruction[7]  ; zero        ; 8.757 ; 8.757 ; 8.757 ; 8.757 ;
+; instruction[8]  ; zero        ; 8.988 ; 8.988 ; 8.988 ; 8.988 ;
+; instruction[9]  ; zero        ; 9.121 ; 9.121 ; 9.121 ; 9.121 ;
+; instruction[10] ; zero        ; 9.199 ; 9.199 ; 9.199 ; 9.199 ;
+; instruction[11] ; zero        ; 8.775 ; 8.775 ; 8.775 ; 8.775 ;
+; instruction[12] ; zero        ; 8.514 ; 8.514 ; 8.514 ; 8.514 ;
+; instruction[13] ; zero        ; 8.320 ; 8.320 ; 8.320 ; 8.320 ;
+; instruction[14] ; zero        ; 9.136 ; 9.136 ; 9.136 ; 9.136 ;
+; instruction[15] ; zero        ; 7.804 ; 7.804 ; 7.804 ; 7.804 ;
+; instruction[16] ; zero        ; 8.573 ; 8.573 ; 8.573 ; 8.573 ;
+; instruction[17] ; zero        ; 9.217 ; 9.217 ; 9.217 ; 9.217 ;
+; instruction[18] ; zero        ; 8.926 ; 8.926 ; 8.926 ; 8.926 ;
+; instruction[19] ; zero        ; 9.067 ; 9.067 ; 9.067 ; 9.067 ;
+; instruction[20] ; zero        ; 8.613 ; 8.613 ; 8.613 ; 8.613 ;
+; instruction[21] ; zero        ; 8.405 ; 8.405 ; 8.405 ; 8.405 ;
+; instruction[22] ; zero        ; 8.439 ; 8.439 ; 8.439 ; 8.439 ;
+; instruction[23] ; zero        ; 8.847 ; 8.847 ; 8.847 ; 8.847 ;
+; instruction[24] ; zero        ; 8.636 ; 8.636 ; 8.636 ; 8.636 ;
+; instruction[25] ; zero        ; 8.452 ; 8.452 ; 8.452 ; 8.452 ;
++-----------------+-------------+-------+-------+-------+-------+
+
+
++----------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                              ;
++------------------+------------+-------+----------+---------+---------------------+
+; Clock            ; Setup      ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+------------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -13.031    ; 0.774 ; N/A      ; N/A     ; -1.380              ;
+;  clock           ; -13.031    ; 0.774 ; N/A      ; N/A     ; -1.380              ;
+; Design-wide TNS  ; -22993.315 ; 0.0   ; 0.0      ; 0.0     ; -2049.38            ;
+;  clock           ; -22993.315 ; 0.000 ; N/A      ; N/A     ; -2049.380           ;
++------------------+------------+-------+----------+---------+---------------------+
+
+
++--------------------------------------------------------------------------------+
+; Setup Times                                                                    ;
++------------------+------------+--------+--------+------------+-----------------+
+; Data Port        ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++------------------+------------+--------+--------+------------+-----------------+
+; aluControl[*]    ; clock      ; 15.490 ; 15.490 ; Rise       ; clock           ;
+;  aluControl[0]   ; clock      ; 15.490 ; 15.490 ; Rise       ; clock           ;
+;  aluControl[1]   ; clock      ; 14.760 ; 14.760 ; Rise       ; clock           ;
+;  aluControl[2]   ; clock      ; 13.055 ; 13.055 ; Rise       ; clock           ;
+; aluSrc           ; clock      ; 16.478 ; 16.478 ; Rise       ; clock           ;
+; instruction[*]   ; clock      ; 19.038 ; 19.038 ; Rise       ; clock           ;
+;  instruction[0]  ; clock      ; 14.156 ; 14.156 ; Rise       ; clock           ;
+;  instruction[1]  ; clock      ; 14.472 ; 14.472 ; Rise       ; clock           ;
+;  instruction[2]  ; clock      ; 14.438 ; 14.438 ; Rise       ; clock           ;
+;  instruction[3]  ; clock      ; 14.040 ; 14.040 ; Rise       ; clock           ;
+;  instruction[4]  ; clock      ; 12.491 ; 12.491 ; Rise       ; clock           ;
+;  instruction[5]  ; clock      ; 11.411 ; 11.411 ; Rise       ; clock           ;
+;  instruction[6]  ; clock      ; 12.549 ; 12.549 ; Rise       ; clock           ;
+;  instruction[7]  ; clock      ; 12.124 ; 12.124 ; Rise       ; clock           ;
+;  instruction[8]  ; clock      ; 11.584 ; 11.584 ; Rise       ; clock           ;
+;  instruction[9]  ; clock      ; 11.857 ; 11.857 ; Rise       ; clock           ;
+;  instruction[10] ; clock      ; 11.944 ; 11.944 ; Rise       ; clock           ;
+;  instruction[11] ; clock      ; 12.579 ; 12.579 ; Rise       ; clock           ;
+;  instruction[12] ; clock      ; 12.401 ; 12.401 ; Rise       ; clock           ;
+;  instruction[13] ; clock      ; 13.915 ; 13.915 ; Rise       ; clock           ;
+;  instruction[14] ; clock      ; 14.143 ; 14.143 ; Rise       ; clock           ;
+;  instruction[15] ; clock      ; 12.393 ; 12.393 ; Rise       ; clock           ;
+;  instruction[16] ; clock      ; 17.916 ; 17.916 ; Rise       ; clock           ;
+;  instruction[17] ; clock      ; 19.038 ; 19.038 ; Rise       ; clock           ;
+;  instruction[18] ; clock      ; 18.182 ; 18.182 ; Rise       ; clock           ;
+;  instruction[19] ; clock      ; 18.686 ; 18.686 ; Rise       ; clock           ;
+;  instruction[20] ; clock      ; 14.785 ; 14.785 ; Rise       ; clock           ;
+;  instruction[21] ; clock      ; 18.045 ; 18.045 ; Rise       ; clock           ;
+;  instruction[22] ; clock      ; 18.276 ; 18.276 ; Rise       ; clock           ;
+;  instruction[23] ; clock      ; 18.764 ; 18.764 ; Rise       ; clock           ;
+;  instruction[24] ; clock      ; 18.289 ; 18.289 ; Rise       ; clock           ;
+;  instruction[25] ; clock      ; 15.463 ; 15.463 ; Rise       ; clock           ;
+; memToRead        ; clock      ; 8.683  ; 8.683  ; Rise       ; clock           ;
+; memWrite         ; clock      ; 8.432  ; 8.432  ; Rise       ; clock           ;
+; regDst           ; clock      ; 13.749 ; 13.749 ; Rise       ; clock           ;
+; regWrite         ; clock      ; 10.853 ; 10.853 ; Rise       ; clock           ;
++------------------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------------------------+
+; Hold Times                                                                     ;
++------------------+------------+--------+--------+------------+-----------------+
+; Data Port        ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++------------------+------------+--------+--------+------------+-----------------+
+; aluControl[*]    ; clock      ; -2.243 ; -2.243 ; Rise       ; clock           ;
+;  aluControl[0]   ; clock      ; -2.529 ; -2.529 ; Rise       ; clock           ;
+;  aluControl[1]   ; clock      ; -3.046 ; -3.046 ; Rise       ; clock           ;
+;  aluControl[2]   ; clock      ; -2.243 ; -2.243 ; Rise       ; clock           ;
+; aluSrc           ; clock      ; -3.168 ; -3.168 ; Rise       ; clock           ;
+; instruction[*]   ; clock      ; -2.515 ; -2.515 ; Rise       ; clock           ;
+;  instruction[0]  ; clock      ; -3.388 ; -3.388 ; Rise       ; clock           ;
+;  instruction[1]  ; clock      ; -3.503 ; -3.503 ; Rise       ; clock           ;
+;  instruction[2]  ; clock      ; -4.064 ; -4.064 ; Rise       ; clock           ;
+;  instruction[3]  ; clock      ; -3.511 ; -3.511 ; Rise       ; clock           ;
+;  instruction[4]  ; clock      ; -3.346 ; -3.346 ; Rise       ; clock           ;
+;  instruction[5]  ; clock      ; -3.738 ; -3.738 ; Rise       ; clock           ;
+;  instruction[6]  ; clock      ; -2.931 ; -2.931 ; Rise       ; clock           ;
+;  instruction[7]  ; clock      ; -3.449 ; -3.449 ; Rise       ; clock           ;
+;  instruction[8]  ; clock      ; -3.539 ; -3.539 ; Rise       ; clock           ;
+;  instruction[9]  ; clock      ; -3.652 ; -3.652 ; Rise       ; clock           ;
+;  instruction[10] ; clock      ; -3.736 ; -3.736 ; Rise       ; clock           ;
+;  instruction[11] ; clock      ; -3.263 ; -3.263 ; Rise       ; clock           ;
+;  instruction[12] ; clock      ; -3.499 ; -3.499 ; Rise       ; clock           ;
+;  instruction[13] ; clock      ; -3.295 ; -3.295 ; Rise       ; clock           ;
+;  instruction[14] ; clock      ; -3.897 ; -3.897 ; Rise       ; clock           ;
+;  instruction[15] ; clock      ; -2.945 ; -2.945 ; Rise       ; clock           ;
+;  instruction[16] ; clock      ; -2.684 ; -2.684 ; Rise       ; clock           ;
+;  instruction[17] ; clock      ; -3.087 ; -3.087 ; Rise       ; clock           ;
+;  instruction[18] ; clock      ; -2.515 ; -2.515 ; Rise       ; clock           ;
+;  instruction[19] ; clock      ; -2.905 ; -2.905 ; Rise       ; clock           ;
+;  instruction[20] ; clock      ; -2.546 ; -2.546 ; Rise       ; clock           ;
+;  instruction[21] ; clock      ; -3.199 ; -3.199 ; Rise       ; clock           ;
+;  instruction[22] ; clock      ; -3.424 ; -3.424 ; Rise       ; clock           ;
+;  instruction[23] ; clock      ; -3.697 ; -3.697 ; Rise       ; clock           ;
+;  instruction[24] ; clock      ; -3.647 ; -3.647 ; Rise       ; clock           ;
+;  instruction[25] ; clock      ; -3.260 ; -3.260 ; Rise       ; clock           ;
+; memToRead        ; clock      ; -2.147 ; -2.147 ; Rise       ; clock           ;
+; memWrite         ; clock      ; -2.882 ; -2.882 ; Rise       ; clock           ;
+; regDst           ; clock      ; -3.175 ; -3.175 ; Rise       ; clock           ;
+; regWrite         ; clock      ; -3.012 ; -3.012 ; Rise       ; clock           ;
++------------------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; zero      ; clock      ; 22.523 ; 22.523 ; Rise       ; clock           ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; zero      ; clock      ; 6.739 ; 6.739 ; Rise       ; clock           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Progagation Delay                                                 ;
++-----------------+-------------+--------+--------+--------+--------+
+; Input Port      ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++-----------------+-------------+--------+--------+--------+--------+
+; aluControl[0]   ; zero        ; 22.750 ; 22.750 ; 22.750 ; 22.750 ;
+; aluControl[1]   ; zero        ; 21.891 ; 21.891 ; 21.891 ; 21.891 ;
+; aluControl[2]   ; zero        ; 18.038 ; 18.038 ; 18.038 ; 18.038 ;
+; aluSrc          ; zero        ; 23.802 ; 23.802 ; 23.802 ; 23.802 ;
+; instruction[0]  ; zero        ; 21.165 ; 21.165 ; 21.165 ; 21.165 ;
+; instruction[1]  ; zero        ; 21.481 ; 21.481 ; 21.481 ; 21.481 ;
+; instruction[2]  ; zero        ; 21.447 ; 21.447 ; 21.447 ; 21.447 ;
+; instruction[3]  ; zero        ; 21.364 ; 21.364 ; 21.364 ; 21.364 ;
+; instruction[4]  ; zero        ; 21.408 ; 21.408 ; 21.408 ; 21.408 ;
+; instruction[5]  ; zero        ; 20.328 ; 20.328 ; 20.328 ; 20.328 ;
+; instruction[6]  ; zero        ; 21.466 ; 21.466 ; 21.466 ; 21.466 ;
+; instruction[7]  ; zero        ; 21.041 ; 21.041 ; 21.041 ; 21.041 ;
+; instruction[8]  ; zero        ; 20.501 ; 20.501 ; 20.501 ; 20.501 ;
+; instruction[9]  ; zero        ; 20.774 ; 20.774 ; 20.774 ; 20.774 ;
+; instruction[10] ; zero        ; 20.861 ; 20.861 ; 20.861 ; 20.861 ;
+; instruction[11] ; zero        ; 19.938 ; 19.938 ; 19.938 ; 19.938 ;
+; instruction[12] ; zero        ; 20.143 ; 20.143 ; 20.143 ; 20.143 ;
+; instruction[13] ; zero        ; 20.109 ; 20.109 ; 20.109 ; 20.109 ;
+; instruction[14] ; zero        ; 20.214 ; 20.214 ; 20.214 ; 20.214 ;
+; instruction[15] ; zero        ; 20.383 ; 20.383 ; 20.383 ; 20.383 ;
+; instruction[16] ; zero        ; 26.526 ; 26.526 ; 26.526 ; 26.526 ;
+; instruction[17] ; zero        ; 27.955 ; 27.955 ; 27.955 ; 27.955 ;
+; instruction[18] ; zero        ; 26.543 ; 26.543 ; 26.543 ; 26.543 ;
+; instruction[19] ; zero        ; 27.505 ; 27.505 ; 27.505 ; 27.505 ;
+; instruction[20] ; zero        ; 22.932 ; 22.932 ; 22.932 ; 22.932 ;
+; instruction[21] ; zero        ; 26.331 ; 26.331 ; 26.331 ; 26.331 ;
+; instruction[22] ; zero        ; 26.842 ; 26.842 ; 26.842 ; 26.842 ;
+; instruction[23] ; zero        ; 25.928 ; 25.928 ; 25.928 ; 25.928 ;
+; instruction[24] ; zero        ; 25.615 ; 25.615 ; 25.615 ; 25.615 ;
+; instruction[25] ; zero        ; 22.472 ; 22.472 ; 22.472 ; 22.472 ;
++-----------------+-------------+--------+--------+--------+--------+
+
+
++---------------------------------------------------------------+
+; Minimum Progagation Delay                                     ;
++-----------------+-------------+-------+-------+-------+-------+
+; Input Port      ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++-----------------+-------------+-------+-------+-------+-------+
+; aluControl[0]   ; zero        ; 7.635 ; 7.635 ; 7.635 ; 7.635 ;
+; aluControl[1]   ; zero        ; 8.063 ; 8.063 ; 8.063 ; 8.063 ;
+; aluControl[2]   ; zero        ; 7.457 ; 7.457 ; 7.457 ; 7.457 ;
+; aluSrc          ; zero        ; 8.116 ; 8.116 ; 8.116 ; 8.116 ;
+; instruction[0]  ; zero        ; 7.993 ; 7.993 ; 7.993 ; 7.993 ;
+; instruction[1]  ; zero        ; 8.076 ; 8.076 ; 8.076 ; 8.076 ;
+; instruction[2]  ; zero        ; 8.494 ; 8.494 ; 8.494 ; 8.494 ;
+; instruction[3]  ; zero        ; 8.562 ; 8.562 ; 8.562 ; 8.562 ;
+; instruction[4]  ; zero        ; 8.437 ; 8.437 ; 8.437 ; 8.437 ;
+; instruction[5]  ; zero        ; 8.545 ; 8.545 ; 8.545 ; 8.545 ;
+; instruction[6]  ; zero        ; 8.224 ; 8.224 ; 8.224 ; 8.224 ;
+; instruction[7]  ; zero        ; 8.757 ; 8.757 ; 8.757 ; 8.757 ;
+; instruction[8]  ; zero        ; 8.988 ; 8.988 ; 8.988 ; 8.988 ;
+; instruction[9]  ; zero        ; 9.121 ; 9.121 ; 9.121 ; 9.121 ;
+; instruction[10] ; zero        ; 9.199 ; 9.199 ; 9.199 ; 9.199 ;
+; instruction[11] ; zero        ; 8.775 ; 8.775 ; 8.775 ; 8.775 ;
+; instruction[12] ; zero        ; 8.514 ; 8.514 ; 8.514 ; 8.514 ;
+; instruction[13] ; zero        ; 8.320 ; 8.320 ; 8.320 ; 8.320 ;
+; instruction[14] ; zero        ; 9.136 ; 9.136 ; 9.136 ; 9.136 ;
+; instruction[15] ; zero        ; 7.804 ; 7.804 ; 7.804 ; 7.804 ;
+; instruction[16] ; zero        ; 8.573 ; 8.573 ; 8.573 ; 8.573 ;
+; instruction[17] ; zero        ; 9.217 ; 9.217 ; 9.217 ; 9.217 ;
+; instruction[18] ; zero        ; 8.926 ; 8.926 ; 8.926 ; 8.926 ;
+; instruction[19] ; zero        ; 9.067 ; 9.067 ; 9.067 ; 9.067 ;
+; instruction[20] ; zero        ; 8.613 ; 8.613 ; 8.613 ; 8.613 ;
+; instruction[21] ; zero        ; 8.405 ; 8.405 ; 8.405 ; 8.405 ;
+; instruction[22] ; zero        ; 8.439 ; 8.439 ; 8.439 ; 8.439 ;
+; instruction[23] ; zero        ; 8.847 ; 8.847 ; 8.847 ; 8.847 ;
+; instruction[24] ; zero        ; 8.636 ; 8.636 ; 8.636 ; 8.636 ;
+; instruction[25] ; zero        ; 8.452 ; 8.452 ; 8.452 ; 8.452 ;
++-----------------+-------------+-------+-------+-------+-------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clock      ; clock    ; 9797632  ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clock      ; clock    ; 9797632  ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++-------------------------------------------------+
+; Unconstrained Paths                             ;
++---------------------------------+-------+-------+
+; Property                        ; Setup ; Hold  ;
++---------------------------------+-------+-------+
+; Illegal Clocks                  ; 0     ; 0     ;
+; Unconstrained Clocks            ; 0     ; 0     ;
+; Unconstrained Input Ports       ; 34    ; 34    ;
+; Unconstrained Input Port Paths  ; 52862 ; 52862 ;
+; Unconstrained Output Ports      ; 1     ; 1     ;
+; Unconstrained Output Port Paths ; 1054  ; 1054  ;
++---------------------------------+-------+-------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Mon Dec 04 22:41:41 2023
+Info: Command: quartus_sta LAB5 -c LAB5
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'LAB5.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clock clock
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -13.031
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):   -13.031    -22993.315 clock 
+Info (332146): Worst-case hold slack is 1.679
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     1.679         0.000 clock 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380     -2049.380 clock 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -5.239
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -5.239     -9224.121 clock 
+Info (332146): Worst-case hold slack is 0.774
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.774         0.000 clock 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380     -2049.380 clock 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4620 megabytes
+    Info: Processing ended: Mon Dec 04 22:41:44 2023
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
+
+

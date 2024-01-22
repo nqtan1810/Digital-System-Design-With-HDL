@@ -1,0 +1,17 @@
+module counter_behavior (Q,
+								 Clock
+								 );
+								 
+	output [3:0] Q;
+	
+	input Clock;
+	
+	reg [3:0] Q;
+	
+	always @(posedge Clock) begin
+		
+		Q <= Q + 1;
+	
+	end
+
+endmodule 

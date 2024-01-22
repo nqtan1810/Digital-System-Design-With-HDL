@@ -1,0 +1,12 @@
+
+State Machine - |moore_detector|present_state
+Name present_state.S111 present_state.S11 present_state.S1 present_state.S0000 present_state.S000 present_state.S00 present_state.S0 present_state.RESET present_state.S1111 
+present_state.RESET 0 0 0 0 0 0 0 0 0 
+present_state.S0 0 0 0 0 0 0 1 1 0 
+present_state.S00 0 0 0 0 0 1 0 1 0 
+present_state.S000 0 0 0 0 1 0 0 1 0 
+present_state.S0000 0 0 0 1 0 0 0 1 0 
+present_state.S1 0 0 1 0 0 0 0 1 0 
+present_state.S11 0 1 0 0 0 0 0 1 0 
+present_state.S111 1 0 0 0 0 0 0 1 0 
+present_state.S1111 0 0 0 0 0 0 0 1 1 

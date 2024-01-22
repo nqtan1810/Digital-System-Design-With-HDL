@@ -1,0 +1,17 @@
+module seven_segment ( Y,
+							  C
+							  );
+							  
+	output [6:0]Y;
+	
+	input [2:0]C;
+	
+	assign Y[0] = C[2] | (~C[1] & C[0]);
+	assign Y[1] = ~(C[1] | C[0]);
+	assign Y[2] = ~(C[1] | C[0]);
+	assign Y[3] = C[2] | C[1] | C[0];
+	assign Y[4] = 1'b1;
+	assign Y[5] = 1'b1;
+	assign Y[6] = ~(C[2] | C[1]);
+							  
+endmodule 

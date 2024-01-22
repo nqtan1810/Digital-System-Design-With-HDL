@@ -1,0 +1,27 @@
+module Comparator (z,
+						 V
+						 );
+						 
+	output z;
+	
+	input [3:0] V;
+	
+	assign z = V <= 4'b1001 ? 1'b0 : 1'b1;
+
+endmodule 
+
+module Circuit_A ();
+
+endmodule 
+
+module Circuit_B ();
+
+endmodule 
+
+module Seven_Segment_Decoder ();
+
+endmodule 
+
+module Decimal_Display ();
+
+endmodule 
