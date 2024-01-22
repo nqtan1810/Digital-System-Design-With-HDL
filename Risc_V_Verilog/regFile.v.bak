@@ -1,0 +1,26 @@
+module regFile(readData1,
+					readData2,
+					clock,
+					readReg1,
+					readReg2,
+					regWrite,
+					writeData,
+					writeReg
+					);
+
+	parameter DATA_WIDTH = 32;
+	parameter ADDR_WIDTH = 5;
+	
+	output [DATA_WIDTH-1 : 0] readData1;
+	output [DATA_WIDTH-1 : 0] readData2;
+	
+	input clock;
+	input [ADDR_WIDTH-1 : 0] readReg1;
+	input [ADDR_WIDTH-1 : 0] readReg2;
+	input regWrite;
+	input [DATA_WIDTH-1 : 0] writeData;
+	input [ADDR_WIDTH-1 : 0] writeReg;
+	
+	
+
+endmodule 

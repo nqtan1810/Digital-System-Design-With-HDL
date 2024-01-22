@@ -1,0 +1,329 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/University/Thiet_Ke_He_Thong_So_Voi_HDL/TH/LAB4/ModelSim
+T_opt
+!s110 1701325617
+VO8oHoC=WKeXd68ZhK<hdL3
+04 17 4 work risc_v_testbench1 fast 0
+=1-346f249b9557-65682b31-346-4848
+o-quiet -auto_acc_if_foreign -work work +acc
+Z1 tCvgOpt 0
+n@_opt
+Z2 OL;O;10.5;63
+T_opt1
+!s110 1701279782
+VmW6`A][EDI40bkI2Y0]5C0
+04 8 4 work datapath fast 0
+=1-346f249b9557-65677826-1cc-48b0
+Z3 o-quiet -auto_acc_if_foreign -work work
+R1
+n@_opt1
+R2
+R0
+T_opt2
+!s110 1701279786
+V48V>gijkV@DFmSGSH`5^I1
+04 10 4 work dataMemory fast 0
+=1-346f249b9557-6567782a-ca-4a20
+R3
+R1
+n@_opt2
+R2
+R0
+vadder
+Z4 !s110 1701325609
+!i10b 1
+!s100 iKQF]4PYb;ZaQ>jJhi5ZC0
+I_=m2XJR0K?_<2Xjl=>Z]<2
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+Z6 dD:/University/Thiet_Ke_He_Thong_So_Voi_HDL/Final_Project/Risc_V_ModelSim
+w1701079601
+8D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/Final_Project/Risc_V_Verilog/adder.v
+FD:/University/Thiet_Ke_He_Thong_So_Voi_HDL/Final_Project/Risc_V_Verilog/adder.v
+L0 1
+Z7 OL;L;10.5;63
+r1
+!s85 0
+31
+Z8 !s108 1701325609.000000
+!s107 D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/Final_Project/Risc_V_Verilog/adder.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/Final_Project/Risc_V_Verilog/adder.v|
+!i113 0
+Z9 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+valu
+R4
+!i10b 1
+!s100 Z<Y1Mamio9LGVEi;MmfPe0
+I0dRDMUJlSREF8Hmm0D8Eb1
+R5
+R6
+w1701079080
+8D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/Final_Project/Risc_V_Verilog/alu.v
+FD:/University/Thiet_Ke_He_Thong_So_Voi_HDL/Final_Project/Risc_V_Verilog/alu.v
+L0 1
+R7
+r1
+!s85 0
+31
+R8
+!s107 D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/Final_Project/Risc_V_Verilog/alu.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/Final_Project/Risc_V_Verilog/alu.v|
+!i113 0
+R9
+R1
+valuControl
+R4
+!i10b 1
+!s100 25IFaBi0<2VP@omkj_kAb0
+IPjG?AJKUYS5IE[jbk@JK21
+R5
+R6
+w1701313254
+8D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/Final_Project/Risc_V_Verilog/aluControl.v
+FD:/University/Thiet_Ke_He_Thong_So_Voi_HDL/Final_Project/Risc_V_Verilog/aluControl.v
+L0 1
+R7
+r1
+!s85 0
+31
+R8
+!s107 D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/Final_Project/Risc_V_Verilog/aluControl.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/Final_Project/Risc_V_Verilog/aluControl.v|
+!i113 0
+R9
+R1
+nalu@control
+vbranchControl
+R4
+!i10b 1
+!s100 ^Dz22@eA;9[TPoYGUdjgG2
+IKGLNZ8YMD[oaM4SEUG7:R2
+R5
+R6
+w1701243975
+8D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/Final_Project/Risc_V_Verilog/branchControl.v
+FD:/University/Thiet_Ke_He_Thong_So_Voi_HDL/Final_Project/Risc_V_Verilog/branchControl.v
+L0 1
+R7
+r1
+!s85 0
+31
+R8
+!s107 D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/Final_Project/Risc_V_Verilog/branchControl.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/Final_Project/Risc_V_Verilog/branchControl.v|
+!i113 0
+R9
+R1
+nbranch@control
+vcontrol
+Z10 !s110 1701325610
+!i10b 1
+!s100 UUEV9X]=9Jo14eDUR0:ie0
+IgRQ`9@2b0ze<^>N6A^A2j2
+R5
+R6
+w1701269621
+8D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/Final_Project/Risc_V_Verilog/control.v
+FD:/University/Thiet_Ke_He_Thong_So_Voi_HDL/Final_Project/Risc_V_Verilog/control.v
+L0 1
+R7
+r1
+!s85 0
+31
+R8
+!s107 D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/Final_Project/Risc_V_Verilog/control.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/Final_Project/Risc_V_Verilog/control.v|
+!i113 0
+R9
+R1
+vcontroller
+R10
+!i10b 1
+!s100 WZaRbc92[gh;SUeEUKzDi0
+Ih_G_YzGXhO@YUTgJj]D[`2
+R5
+R6
+w1701270282
+8D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/Final_Project/Risc_V_Verilog/controller.v
+FD:/University/Thiet_Ke_He_Thong_So_Voi_HDL/Final_Project/Risc_V_Verilog/controller.v
+L0 1
+R7
+r1
+!s85 0
+31
+Z11 !s108 1701325610.000000
+!s107 D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/Final_Project/Risc_V_Verilog/controller.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/Final_Project/Risc_V_Verilog/controller.v|
+!i113 0
+R9
+R1
+vdataMemory
+R10
+!i10b 1
+!s100 9kk7AcG^D8WkzkBVYjGC@2
+IB9jQim_E1UV>XZc_Wdml23
+R5
+R6
+w1701321264
+8D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/Final_Project/Risc_V_Verilog/dataMemory.v
+FD:/University/Thiet_Ke_He_Thong_So_Voi_HDL/Final_Project/Risc_V_Verilog/dataMemory.v
+L0 1
+R7
+r1
+!s85 0
+31
+R11
+!s107 D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/Final_Project/Risc_V_Verilog/dataMemory.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/Final_Project/Risc_V_Verilog/dataMemory.v|
+!i113 0
+R9
+R1
+ndata@memory
+vdatapath
+R10
+!i10b 1
+!s100 ]>LROLhcnjKiD2nF`g0e72
+I6hF2`h`jDLA9aiJCZ@C;T0
+R5
+R6
+w1701311118
+8D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/Final_Project/Risc_V_Verilog/datapath.v
+FD:/University/Thiet_Ke_He_Thong_So_Voi_HDL/Final_Project/Risc_V_Verilog/datapath.v
+L0 1
+R7
+r1
+!s85 0
+31
+R11
+!s107 D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/Final_Project/Risc_V_Verilog/datapath.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/Final_Project/Risc_V_Verilog/datapath.v|
+!i113 0
+R9
+R1
+vFFD_resettable
+R10
+!i10b 1
+!s100 Gi^9j<2JOIGK1QiAZVZ8Q1
+ID1nSCP_aoj6AVBT:V@_;h0
+R5
+R6
+w1701321076
+8D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/Final_Project/Risc_V_Verilog/FFD_resettable.v
+FD:/University/Thiet_Ke_He_Thong_So_Voi_HDL/Final_Project/Risc_V_Verilog/FFD_resettable.v
+L0 1
+R7
+r1
+!s85 0
+31
+R11
+!s107 D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/Final_Project/Risc_V_Verilog/FFD_resettable.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/Final_Project/Risc_V_Verilog/FFD_resettable.v|
+!i113 0
+R9
+R1
+n@f@f@d_resettable
+vimmGenerator
+R10
+!i10b 1
+!s100 G=EGLFj2P5SI[``0nQB_@1
+IC9gE]F`IR>BdkF]DDV4EQ1
+R5
+R6
+w1701096911
+8D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/Final_Project/Risc_V_Verilog/immGenerator.v
+FD:/University/Thiet_Ke_He_Thong_So_Voi_HDL/Final_Project/Risc_V_Verilog/immGenerator.v
+L0 1
+R7
+r1
+!s85 0
+31
+R11
+!s107 D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/Final_Project/Risc_V_Verilog/immGenerator.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/Final_Project/Risc_V_Verilog/immGenerator.v|
+!i113 0
+R9
+R1
+nimm@generator
+vinstructionMemory
+R10
+!i10b 1
+!s100 onWCKOYAelmj?TS__6M3e3
+IWFP9Bn[:iib6H<Fg6I``U0
+R5
+R6
+w1701059280
+8D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/Final_Project/Risc_V_Verilog/instructionMemory.v
+FD:/University/Thiet_Ke_He_Thong_So_Voi_HDL/Final_Project/Risc_V_Verilog/instructionMemory.v
+L0 1
+R7
+r1
+!s85 0
+31
+R11
+!s107 D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/Final_Project/Risc_V_Verilog/instructionMemory.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/Final_Project/Risc_V_Verilog/instructionMemory.v|
+!i113 0
+R9
+R1
+ninstruction@memory
+vmux
+R10
+!i10b 1
+!s100 9^U]2W4a>XXg@0`Uho@EE3
+IfCHo>M<e^g0cTXKi5Y<CV1
+R5
+R6
+w1701079749
+8D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/Final_Project/Risc_V_Verilog/mux.v
+FD:/University/Thiet_Ke_He_Thong_So_Voi_HDL/Final_Project/Risc_V_Verilog/mux.v
+L0 1
+R7
+r1
+!s85 0
+31
+R11
+!s107 D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/Final_Project/Risc_V_Verilog/mux.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/Final_Project/Risc_V_Verilog/mux.v|
+!i113 0
+R9
+R1
+vregFile
+R10
+!i10b 1
+!s100 K_^aCXVjSRAEJQE9RJjW63
+Ie<gIA_^LiLmN^4?X@P4eB2
+R5
+R6
+w1701321614
+8D:\University\Thiet_Ke_He_Thong_So_Voi_HDL\Final_Project\Risc_V_Verilog\regFile.v
+FD:\University\Thiet_Ke_He_Thong_So_Voi_HDL\Final_Project\Risc_V_Verilog\regFile.v
+L0 1
+R7
+r1
+!s85 0
+31
+R11
+!s107 D:\University\Thiet_Ke_He_Thong_So_Voi_HDL\Final_Project\Risc_V_Verilog\regFile.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:\University\Thiet_Ke_He_Thong_So_Voi_HDL\Final_Project\Risc_V_Verilog\regFile.v|
+!i113 0
+R9
+R1
+nreg@file
+vRISC_V
+R10
+!i10b 1
+!s100 JZY<c88n4F^8IdM7gmjJ=2
+I3gJDhiC_IAUh5FO3Q@12O1
+R5
+R6
+w1701277520
+8D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/Final_Project/Risc_V_Verilog/RISC_V.v
+FD:/University/Thiet_Ke_He_Thong_So_Voi_HDL/Final_Project/Risc_V_Verilog/RISC_V.

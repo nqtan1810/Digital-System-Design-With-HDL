@@ -1,0 +1,17 @@
+module mux (out,
+				sel,
+				data0,
+				data1
+				);
+
+	parameter DATA_WIDTH = 32;
+	
+	output [DATA_WIDTH-1 : 0] out;
+	  
+	input sel;
+	input [DATA_WIDTH-1 : 0] data0;
+	input [DATA_WIDTH-1 : 0] data1;
+
+	assign out = (sel == 1) ? data1 : data0;
+  
+endmodule

@@ -1,0 +1,22 @@
+module FFD_resettable(clock, reset_, d, q);
+
+   parameter WIDTH = 32;
+	
+	output [WIDTH-1:0] q;
+	
+   input  [WIDTH-1:0] d;
+   input clock, reset_;
+
+   reg [WIDTH-1:0] q;
+	
+   always @(posedge clock) begin
+	
+		if (!reset_) 
+			q <= 0;
+			
+      else 
+			q <= d;
+			
+	end	
+	
+endmodule 

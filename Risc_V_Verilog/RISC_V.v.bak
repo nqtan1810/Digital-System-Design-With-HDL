@@ -1,0 +1,10 @@
+module risc_v (clock,
+					rstn);
+					
+	input clock;
+	input rstn;
+	
+	
+
+
+endmodule 

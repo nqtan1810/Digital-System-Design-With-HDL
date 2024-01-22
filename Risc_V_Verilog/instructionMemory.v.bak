@@ -1,0 +1,24 @@
+module instructionMemory(readData,
+								 clock,
+								 readAddress
+								 );
+	
+	parameter DATA_WIDTH = 32;
+	parameter ADDR_WIDTH = 10;
+	
+	output [DATA_WIDTH-1 : 0] readData;
+	
+	input clock;
+	input [ADDR_WIDTH-1 : 0] readAddress;
+	
+	reg [DATA_WIDTH-1 : 0] imem[2**ADDR_WIDTH-1 : 0];
+	
+	always @(posedge clock) begin
+	
+		readData <= imem[readAddress];
+	
+	end 
+	
+	initial $readmemb("D:/University/Thiet_Ke_He_Thong_So_Voi_HDL/Risc_V_Verilog/text/imem.bin", RAM);
+
+endmodule 

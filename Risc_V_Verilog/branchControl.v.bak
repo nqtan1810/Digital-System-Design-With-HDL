@@ -1,0 +1,17 @@
+module branchControl (PCsrc1,
+							 PCsrc2,
+							 branch,
+							 jal,
+							 zero
+							 );
+							 
+	output PCsrc1;
+	output PCsrc2;
+	
+	input branch;
+	input jal;
+	input zero;
+
+	assign PCsrc1 = branch && zero
+
+endmodule 

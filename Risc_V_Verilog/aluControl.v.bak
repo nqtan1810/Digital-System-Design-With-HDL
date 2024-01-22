@@ -1,0 +1,40 @@
+module aluControl(operation,
+						aluOp,
+						funct3,
+						funct7
+						);
+						
+	output [3:0] operation;
+		
+	input [1:0] aluOp;
+	input [6:0] funct7;
+	input [2:0] funct3;
+
+	reg [3:0] operation;
+	 
+	always @(aluop or funct7 or funct3)
+	
+		case(aluop)
+		
+			2'b00: operation = 4'b0010; //add (for lw/sw/addi/jal)
+			2'b01: operation = 4'b1010; //sub (for beq)
+			
+			// R-type instructions
+			default: casex(funct7)
+			
+							7'b0000000: casex(funct3)
+							
+												3'b000: operation = 4'b0010; //add
+												3'b111: operation = 4'b0000; //and
+												3'b010: operation = 4'b1011; //slt
+												default: operation = 4'bxxxx;
+												
+											endcase
+											
+							7'b0100000: operation = 4'b1010; //sub
+							default: operation = 4'bxxxx;	//illegal operation
+							
+						endcase
+		endcase
+ 
+endmodule

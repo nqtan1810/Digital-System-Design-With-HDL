@@ -1,0 +1,52 @@
+module controller (branch,
+						 slt,
+						 lui,
+						 jal,
+						 memToReg,
+						 memWrite,
+						 memRead,
+						 aluOp,
+						 aluSrc,
+						 regWrite,
+						 opcode,
+						 funct3,
+						 funct7
+						 );
+						 
+	output branch;
+	output slt;
+	output lui;
+	output jal;
+	output memToReg;
+	output memWrite;
+	output memRead;
+	output [1:0] aluOp;
+	output aluSrc;
+	output regWrite;
+	
+	input [6:0] opcode;
+	input [2:0] funct3;
+	input [6:0] funct7;
+
+	reg [10:0] controlSignals;
+	
+	always @(opcode or funct3) begin
+	
+		case(opcode)
+		
+		  7'b0110011: controlSignals = 11'b;  // R-Type: ADD, SUB, OR, AND, SLT
+		  7'b0000011: controlSignals = 11'b;  // LW
+		  7'b0100011: controlSignals = 11'b;  // SW
+		  7'b0010011: controlSignals = 11'b;  // ADDI, ORI, ANDI
+		  7'b1101111: controlSignals = 11'b0011000000;  // JAL
+		  7'b1100011: case(funct3)
+							 3'b000: controlSignals = 10'b0100100001;  // BEQ
+							 default: controlSignals = 10'bxxxxxxxxxx; // illegal op
+						  endcase
+		  default: controlSignals = 11'bxxxxxxxxxx; // illegal op
+		  
+		endcase
+	
+	end
+
+endmodule 
